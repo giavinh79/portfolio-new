@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Introduction from '../components/Introduction';
 import SocialMedia from '../components/SocialMedia';
+import Content from '../components/Content';
+import Skills from '../components/Skills';
 
 export default function Home() {
   return (
@@ -20,58 +22,8 @@ export default function Home() {
 
       <main>
         <Introduction />
-        <div style={{ marginLeft: '33rem', padding: '2rem' }}>
-          {/* <h3 style={{ color: '#bbb' }}>Coding Projects</h3> */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '1rem' }}>
-            <p
-              style={{
-                fontFamily: 'Montserrat',
-                fontSize: '1.2rem',
-                color: '#b1b1b1',
-                margin: '0',
-              }}
-            >
-              SKILLS
-            </p>
-            <p style={{ margin: '0 1rem' }}></p>
-            <p
-              style={{
-                fontFamily: 'Montserrat',
-                fontSize: '1.2rem',
-                color: '#b1b1b1',
-                margin: '0',
-              }}
-            >
-              PROJECTS
-            </p>
-          </div>
-
-          <div className='grid'>
-            <a href='https://nextjs.org/docs' className='card'>
-              {/* <code>Resume</code> */}
-              <h3>React.js &rarr;</h3>
-              <p>Placeholder text for the technology above</p>
-            </a>
-
-            <a href='https://nextjs.org/learn' className='card'>
-              <h3>Node.js &rarr;</h3>
-              <p>Placeholder text for the technology above</p>
-            </a>
-
-            <a href='https://github.com/vercel/next.js/tree/master/examples' className='card'>
-              <h3>Java &rarr;</h3>
-              <p>Placeholder text for the technology above</p>
-            </a>
-
-            <a
-              href='https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-              className='card'
-            >
-              <h3>Python &rarr;</h3>
-              <p>Placeholder text for the technology above</p>
-            </a>
-          </div>
-        </div>
+        {/* <h3 style={{ color: '#bbb' }}>Coding Projects</h3> */}
+        <Content />
       </main>
 
       {/* <footer>
@@ -137,47 +89,6 @@ export default function Home() {
           font-size: 1.1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
             Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 1rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
         }
 
         .logo {
