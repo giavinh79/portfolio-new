@@ -5,10 +5,7 @@ export default function Projects() {
     <div className={styles.grid}>
       <div className={styles.row}>
         <div className={styles.card} style={{ marginRight: '4rem' }}>
-          <img
-            src='/images/plop.PNG'
-            style={{ width: '100%', height: 'auto', borderRadius: '1rem', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)' }}
-          />
+          <img src='/images/plop.PNG' className={styles.image} />
           <p className={styles.title}>Plop</p>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
@@ -16,10 +13,7 @@ export default function Projects() {
           </p>
         </div>
         <div className={styles.card}>
-          <img
-            src='/images/CodeConnectDark.PNG'
-            style={{ width: '100%', height: 'auto', borderRadius: '1rem', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)' }}
-          />
+          <img src='/images/CodeConnectDark.PNG' className={styles.image} />
           <p className={styles.title}>CodeConnect</p>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
@@ -29,10 +23,7 @@ export default function Projects() {
       </div>
       <div className={styles.row}>
         <div className={styles.card} style={{ marginRight: '4rem' }}>
-          <img
-            src='/images/GymTrack.PNG'
-            style={{ width: '100%', height: 'auto', borderRadius: '1rem', boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)' }}
-          />
+          <img src='/images/GymTrack.PNG' className={styles.image} />
           <p className={styles.title}>GymTrack</p>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
@@ -40,17 +31,7 @@ export default function Projects() {
           </p>
         </div>
         <div className={styles.card}>
-          <img
-            src='/images/ReactBodyHighlighter.PNG'
-            style={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: '1rem',
-              boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)',
-              maxHeight: '222px',
-              objectFit: 'cover',
-            }}
-          />
+          <img src='/images/ReactBodyHighlighter.PNG' className={styles.image} />
           <p className={styles.title}>React Body Highlighter</p>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
