@@ -11,6 +11,7 @@ export default function Projects() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
             explicabo excepturi sed voluptas tempore in sequi.
           </p>
+          <button className={styles.button}>VIEW PROJECT &rarr;</button>
         </div>
         <div className={styles.card}>
           <img src='/images/CodeConnectDark.PNG' className={styles.image} />
@@ -19,6 +20,7 @@ export default function Projects() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
             explicabo excepturi sed voluptas tempore in sequi.
           </p>
+          <button className={styles.button}>VIEW PROJECT &rarr;</button>
         </div>
       </div>
       <div className={styles.row}>
@@ -29,6 +31,9 @@ export default function Projects() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
             explicabo excepturi sed voluptas tempore in sequi.
           </p>
+          <button className={styles.button} disabled>
+            VIEW PROJECT &rarr;
+          </button>
         </div>
         <div className={styles.card}>
           <img src='/images/ReactBodyHighlighter.PNG' className={styles.image} />
@@ -37,6 +42,7 @@ export default function Projects() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, cumque officia esse earum nemo maxime
             explicabo excepturi sed voluptas tempore in sequi.
           </p>
+          <button className={styles.button}>VIEW PROJECT &rarr;</button>
         </div>
       </div>
     </div>
