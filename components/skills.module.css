@@ -1,11 +1,3 @@
-.resume {
-  width: 100%;
-  max-width: 50rem;
-  margin-top: 12px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 1em;
-}
-
 .grid {
   display: flex;
   align-items: center;
@@ -14,6 +6,38 @@
   flex: 1;
   padding: 1rem 4rem 0 4rem;
 }
+
+/* Resume Picture and Download Styles */
+
+.resume {
+  width: 100%;
+  max-width: 50rem;
+  margin-top: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1em;
+}
+
+.resume-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.resume-download {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.resume-download-text {
+  margin: 0 0.5rem 0 0;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Card Styles */
 
 .card {
   margin: 1rem;

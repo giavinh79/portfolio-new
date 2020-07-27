@@ -1,5 +1,11 @@
 import styles from './projects.module.css';
 
+/*
+ * List containing older projects not immediately in viewport
+ * These projects will be loaded as the user scrolls down
+ */
+const OlderProjects = [];
+
 export default function Projects() {
   return (
     <div className={styles.grid}>
