@@ -7,16 +7,18 @@ export default function Home() {
     <div className='container'>
       <Head>
         <title>Giavinh Lam</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
         <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' />
         <link
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'></link>
+        <link rel='preload' href='/docs/giavinhlam-1.png' as='image' />
         <meta name='description' content="Giavinh Lam's Portfolio Website" />
         <meta name='keywords' content='Giavinh, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
         <meta name='author' content='Giavinh Lam' />
-        <link rel='preload' href='/docs/giavinhlam-1.png' as='image' />
       </Head>
 
       <main>

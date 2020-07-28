@@ -9,6 +9,8 @@
   padding: 2rem;
 }
 
+/* Info styles */
+
 .school {
   font-family: Montserrat;
   font-size: 1.2rem;
@@ -47,4 +49,55 @@
   line-height: 1.5;
   font-size: 1rem;
   color: #666;
+}
+
+/* Portfolio Art Styles */
+
+.portfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  /* border-bottom: none;
+  border-left: none;
+  border-right: none; */
+  width: 100%;
+  height: 100%;
+  margin: 2rem 0 2rem 0;
+}
+
+.portfolio-wrapper img {
+  width: 90%;
+  height: auto;
+  margin-top: 0;
+}
+
+/* Mobile View */
+
+@media only screen and (max-width: 500px) {
+  .container {
+    min-width: initial;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    position: initial;
+    justify-content: center;
+    align-items: center;
+    max-width: initial;
+    min-width: initial;
+  }
+
+  .portfolio-wrapper img {
+    margin-top: 1rem;
+    max-width: 35rem;
+  }
 }

@@ -1,6 +1,5 @@
 import styles from './introduction.module.css';
 import SocialMedia from './SocialMedia';
-import ContactForm from './ContactForm';
 
 export default function Introduction() {
   return (
@@ -14,25 +13,8 @@ export default function Introduction() {
       {/* </div> */}
 
       <h2 className={styles.subtitle}>Computer Engineering (CENG:C)</h2>
-      <div
-        style={{
-          // border: '1px solid #c8c8c8',
-          // backgroundColor: '#2B3137',
-          // padding: '1rem',
-          // borderRadius: '10px',
-          display: 'flex',
-          justifyContent: 'center',
-          borderBottom: 'none',
-          borderLeft: 'none',
-          borderRight: 'none',
-          width: '100%',
-          height: '100%',
-          margin: '2rem 0 2rem 0',
-        }}
-      >
-        {/* <h2 style={{ fontFamily: 'Montserrat', color: '#878A8F', textAlign: 'center' }}>Contact Me</h2> */}
-        {/* <ContactForm /> */}
-        <img src='/portfoliosvg.svg' alt='portfolio abstract art' style={{ width: '90%', height: 'auto' }} />
+      <div className={styles['portfolio-wrapper']}>
+        <img src='/portfoliosvg.svg' alt='portfolio abstract art' />
       </div>
       {/* <p className={styles.description}>
         Passionate about learning new software tools and technologies. Passionate about good coding practices (clean,

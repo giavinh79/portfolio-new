@@ -1,8 +1,8 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
+  margin-left: 35rem;
+  padding: 2rem;
+  flex: 1;
+  background-color: #f8f8f8;
 }
 
 .option {
@@ -21,6 +21,9 @@
 
 .option-wrapper {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
   /* color: #666; */
 }
 
@@ -40,13 +43,12 @@
   border-left: none;
   border-top: none;
   color: #888;
-  /* font-weight: 600; */
 }
 
-/* .option:nth-child(0) {
-    margin-
-}
+/* Mobile View */
 
-.option:nth-child(1) {
-    
-} */
+@media only screen and (max-width: 1150px) {
+  .container {
+    margin-left: 0;
+  }
+}
