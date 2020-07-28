@@ -1,3 +1,14 @@
+.container {
+  display: flex;
+  margin-top: auto;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 2rem;
+  background-color: white;
+  width: 30.9rem;
+}
+
 .icon {
   font-size: 40px;
   margin: 0 2px 0 2px;
@@ -17,4 +28,21 @@
 .icon:hover,
 .iconWrapper:hover {
   color: #666;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 500px) {
+  .iconWrapper {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .container {
+    position: initial;
+    margin-top: 2rem;
+    width: initial;
+    padding-bottom: 0;
+  }
 }

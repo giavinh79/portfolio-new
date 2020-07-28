@@ -4,8 +4,7 @@ import styles from './socialMedia.module.css';
 
 export default function SocialMedia() {
   return (
-    <div style={{ display: 'flex', marginTop: 'auto', marginLeft: 'auto' }}>
-      {/* <i className={`${styles.icon} fa fa-sun-o`} aria-hidden='true'></i> */}
+    <div className={styles.container}>
       <a
         target='_blank'
         rel='noopener noreferrer'
