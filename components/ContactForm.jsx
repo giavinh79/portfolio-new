@@ -8,8 +8,8 @@ export default function ContactForm() {
   return (
     <form action='https://formspree.io/meqrvnjk' method='POST' className={styles.form}>
       <p className={styles.title}>Contact Me</p>
-      <div style={{ display: 'flex', marginBottom: '1rem' }}>
-        <div className={styles['input-wrapper']} style={{ marginRight: '1rem' }}>
+      <div style={{ display: 'flex', marginBottom: '1rem', gap: '1rem', flexWrap: 'wrap' }}>
+        <div className={styles['input-wrapper']}>
           <label htmlFor='name' className={styles.text}>
             Name
           </label>

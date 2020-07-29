@@ -70,3 +70,11 @@
   flex-direction: column;
   flex: 1;
 }
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 650px) {
+  .grid {
+    padding: 1rem 0;
+  }
+}

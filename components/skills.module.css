@@ -69,3 +69,11 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 650px) {
+  .grid {
+    padding: 1rem 0;
+  }
+}
