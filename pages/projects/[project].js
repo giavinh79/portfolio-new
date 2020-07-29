@@ -1,8 +1,18 @@
-import Head from 'next/head';
-import Introduction from '../components/Introduction';
-import Content from '../components/Content';
+/*
+ * Page for clicked projects
+ * Similar to index page structure (index.js)
+ */
 
-export default function Home() {
+import Head from 'next/head';
+import Introduction from '../../components/Introduction';
+import Project from '../../components/Project';
+import { useRouter } from 'next/router';
+
+const Post = () => {
+  const router = useRouter();
+  const { project } = router.query;
+  console.log(router.query);
+
   return (
     <div>
       <Head>
@@ -10,19 +20,13 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
         <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' />
-        <link
-          rel='stylesheet'
-          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
-        />
-        <link rel='preload' href='/docs/giavinhlam-1.png' as='image' />
-        <meta name='description' content="Giavinh Lam's Portfolio Website" />
-        <meta name='keywords' content='Giavinh, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'></link>
         <meta name='author' content='Giavinh Lam' />
       </Head>
 
       <main>
         <Introduction />
-        <Content />
+        <Project title={project} images={5} description='Blah Blah' technologies={['React.js', 'Redux']} />
       </main>
 
       <style jsx global>{`
@@ -40,4 +44,6 @@ export default function Home() {
       `}</style>
     </div>
   );
-}
+};
+
+export default Post;

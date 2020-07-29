@@ -1,0 +1,82 @@
+/* Card styles */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+  margin-bottom: 4rem;
+  background: none;
+}
+
+.button {
+  background-color: #4077b8;
+  border: none;
+  color: white;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+  font-family: Montserrat;
+  width: fit-content;
+}
+
+.button:hover {
+  background-color: #115fb8;
+}
+
+.button:disabled,
+.button[disabled] {
+  cursor: not-allowed;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+/* .card:hover {
+    background: linear-gradient(180deg, #5989e5, #37cfdc);
+  } */
+
+.image {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s; /* Animation */
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.title {
+  color: #2b3137;
+  font-weight: 700;
+  font-size: 2.5rem;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  margin: 1.5rem 0 0rem 0;
+}
+
+.description {
+  color: rgb(105, 105, 105);
+  line-height: 2rem;
+  font-size: 1rem;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+}
+
+.technology {
+  color: #437a9d;
+}
+
+/* Mobile styles */
+
+@media only screen and (max-width: 1150px) {
+  .card {
+    min-width: auto;
+  }
+}
