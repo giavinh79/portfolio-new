@@ -9,6 +9,8 @@ export const PROJECTS_DATA = {
     title: 'Plop',
     description:
       'Open-source project management web application for teams. It is implemented with <strong>React.js</strong> for the frontend, <strong>Adonis.js</strong> (Node.js framework) as the REST API backend, <strong>Cloudinary</strong> for image storage, and a <strong>PostgreSQL</strong> database. Some features include task drag-and-drop dashboards, administration hierarchy, chat, logs, and analytics.',
+    github: 'https://github.com/GV79/Plop',
+    demo: 'https://plop.team',
     numImages: 5,
     imageName: 'plop',
     imageExtension: '.png',

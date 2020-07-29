@@ -8,11 +8,12 @@
   border-style: solid;
   border-width: 0.125rem;
   border-radius: 1.5rem;
-  background-color: #242529;
-  border-color: #242529;
+  background-color: #2b3137;
+  border-color: #2b3137;
+  /* background-color: #4077b8;
+  border-color: #4077b8; */
   /* box-shadow: 0 1px 5px rgba(0, 0, 0, 1); */
   color: #fff;
-  margin-bottom: 1rem;
   cursor: pointer;
 }
 
@@ -28,4 +29,8 @@
     'Helvetica Neue', sans-serif;
   margin: 0;
   padding-left: 0.5rem;
+}
+
+.image {
+  height: 1.2rem;
 }

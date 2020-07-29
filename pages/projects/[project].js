@@ -11,21 +11,24 @@ import { useRouter } from 'next/router';
 const Post = () => {
   const router = useRouter();
   const { project } = router.query;
-  console.log(router.query);
 
   return (
     <div>
       <Head>
         <title>Giavinh Lam</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
         <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' />
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'></link>
-        <meta name='author' content='Giavinh Lam' />
+        <link
+          rel='stylesheet'
+          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+        />
       </Head>
 
       <main>
-        <Introduction />
+        {/* <Introduction /> */}
         <Project title={project} images={5} description='Blah Blah' technologies={['React.js', 'Redux']} />
       </main>
 

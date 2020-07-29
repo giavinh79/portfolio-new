@@ -1,9 +1,9 @@
 import styles from './badge.module.css';
 
-export default function Badge({ icon, text }) {
+export default function Badge({ icon, image, text }) {
   return (
     <div className={styles.badge}>
-      <i className={icon}></i>
+      {icon ? <i className={icon}></i> : <img src={image} alt='icon' className={styles.image} />}
       <p>{text}</p>
     </div>
   );
