@@ -24,7 +24,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  /* color: #666; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .selected {

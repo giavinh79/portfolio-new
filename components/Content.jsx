@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Skills from './Skills';
-import styles from './content.module.css';
 import Projects from './Projects';
+import styles from './content.module.css';
 
 const CONTENT = {
   SKILLS: 'skills',
