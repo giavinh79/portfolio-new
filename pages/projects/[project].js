@@ -5,10 +5,26 @@
 import Head from 'next/head';
 import Project from '../../components/Project';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 export default function ProjectPage() {
   const router = useRouter();
   const { project } = router.query;
+
+  useEffect(() => {
+    let head = document.head;
+    let link = document.createElement('link');
+
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css?family=Montserrat';
+
+    head.appendChild(link);
+
+    return () => {
+      head.removeChild(link);
+    };
+  }, []);
 
   return (
     <div>
@@ -17,7 +33,7 @@ export default function ProjectPage() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' />
+        {/* <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' /> */}
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'></link>
         <link
           rel='stylesheet'

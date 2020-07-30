@@ -8,8 +8,6 @@ export default function Project({ project }) {
   const router = useRouter();
   const key = project.toUpperCase();
 
-  console.log(key);
-
   /* Project Data */
   const { title, description, github, demo, numImages, imageName } = PROJECTS_DATA[key];
 
