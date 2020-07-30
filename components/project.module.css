@@ -16,14 +16,6 @@
   max-width: 80rem;
 }
 
-.badge-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
 /* .card:hover {
       background: linear-gradient(180deg, #5989e5, #37cfdc);
     } */
@@ -226,11 +218,6 @@
 
   .button {
     margin-left: initial;
-  }
-
-  .badge-wrapper {
-    justify-content: center;
-    order: 2;
   }
 }
 

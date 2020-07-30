@@ -1,0 +1,16 @@
+.badge-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 450px) {
+  .badge-wrapper {
+    justify-content: center;
+    order: 2;
+  }
+}

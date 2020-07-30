@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { BADGE_ICONS, PROJECTS_DATA } from '../constants';
 import Badge from './Badge';
 import styles from './project.module.css';
+import Badges from './Badges';
 
 export default function Project({ project }) {
   const router = useRouter();
@@ -105,7 +106,7 @@ export default function Project({ project }) {
         </div>
         <div className={styles['dot-wrapper']}>{renderDots()}</div>
 
-        <div className={styles['badge-wrapper']}>
+        {/* <div className={styles['badge-wrapper']}>
           {tags.map((technology, index) => {
             const graphic = BADGE_ICONS[technology];
 
@@ -117,10 +118,8 @@ export default function Project({ project }) {
               return <Badge image={graphic.link} text={technology} key={index} />;
             }
           })}
-          {/* <Badge icon='devicon-react-original' text='React' />
-          <Badge image='/images/icons/adonisjs.svg' text='Adonis JS' />
-          <Badge icon='devicon-postgresql-plain' text='PostgreSQL' /> */}
-        </div>
+        </div> */}
+        <Badges tags={tags} />
 
         <p className={styles.title}>{title.toUpperCase()}</p>
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>

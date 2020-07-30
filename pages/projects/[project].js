@@ -33,7 +33,6 @@ export default function ProjectPage() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
-        {/* <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' /> */}
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'></link>
         <link
           rel='stylesheet'
