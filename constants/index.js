@@ -1,3 +1,110 @@
+/* Map for badges (technologies to icons/images) */
+
+export const BADGE_ICONS = {
+  adonisjs: {
+    devicon: false,
+    link: '/images/icons/adonisjs.svg',
+  },
+  android: {
+    devicon: true,
+    link: 'devicon-android-plain colored',
+  },
+  'ant design': {
+    devicon: false,
+    link: '/images/icons/antdesign.svg',
+  },
+  bootstrap: {
+    devicon: true,
+    link: 'devicon-bootstrap-plain colored',
+  },
+  c: {
+    devicon: true,
+    link: 'devicon-c-plain colored',
+  },
+  css: {
+    devicon: true,
+    link: 'devicon-css3-plain colored',
+  },
+  django: {
+    devicon: true,
+    link: 'devicon-django-plain',
+  },
+  express: {
+    devicon: true,
+    link: 'devicon-express-original',
+  },
+  html: {
+    devicon: true,
+    link: 'devicon-html5-plain colored',
+  },
+  firebase: {
+    devicon: false,
+    link: '/images/icons/firebase.svg',
+  },
+  java: {
+    devicon: true,
+    link: 'devicon-java-plain colored',
+  },
+  javascript: {
+    devicon: true,
+    link: 'devicon-javascript-plain colored',
+  },
+  'node.js': {
+    devicon: true,
+    link: 'devicon-nodejs-plain colored',
+  },
+  npm: {
+    devicon: true,
+    link: 'devicon-npm-original-wordmark colored',
+  },
+  mongodb: {
+    devicon: true,
+    link: 'devicon-mongodb-plain colored',
+  },
+  mysql: {
+    devicon: true,
+    link: 'devicon-mysql-plain',
+  },
+  postgresql: {
+    devicon: true,
+    link: 'devicon-postgresql-plain colored',
+  },
+  python: {
+    devicon: true,
+    link: 'devicon-python-plain',
+  },
+  react: {
+    devicon: true,
+    link: 'devicon-react-original',
+  },
+  'react native': {
+    devicon: true,
+    link: 'devicon-react-original colored',
+  },
+  redux: {
+    devicon: false,
+    link: '/images/icons/redux.svg',
+  },
+  sass: {
+    devicon: true,
+    link: 'devicon-sass-original colored',
+  },
+  typescript: {
+    devicon: true,
+    link: 'devicon-typescript-plain colored',
+  },
+};
+
+// 'react',
+// 'typescript',
+// 'python',
+// 'postgresql',
+// 'react native',
+// 'django',
+// 'redux',
+// 'styled-components',
+// 'material ui',
+
 /* Import new project data here and update Projects.jsx accordingly */
 export const PROJECTS_DATA = {
   PLOP: {
@@ -9,7 +116,7 @@ export const PROJECTS_DATA = {
     numImages: 6,
     imageName: 'plop',
     imageExtension: '.png',
-    tags: ['react', 'javascript', 'adonis js', 'postgresql', 'ant design', 'node.js', 'styled-components'],
+    tags: ['react', 'javascript', 'adonisjs', 'postgresql', 'ant design', 'node.js', 'styled-components'],
   },
   CODECONNECT: {
     title: 'CodeConnect',
@@ -21,12 +128,14 @@ export const PROJECTS_DATA = {
     tags: [
       'react',
       'typescript',
+      'docker',
       'python',
       'postgresql',
       'react native',
       'django',
       'redux',
       'styled-components',
+      'travis',
       'material ui',
     ],
   },
@@ -44,6 +153,8 @@ export const PROJECTS_DATA = {
     title: 'React Body Highlighter',
     description:
       'Open-source <strong>React.js</strong> NPM package that provides posterior (back) and anterior (front) views of a body model and accepts a variety of props to highlight different muscles. I created this as I could not find a compatible solution to use myself for my React.js fitness web application (GymTrack). This NPM package is also written in <strong>TypeScript</strong> to provide type safety and IntelliSense.',
+    github: 'https://github.com/GV79/react-body-highlighter',
+    demo: 'https://codesandbox.io/s/magical-kowalevski-rzw9d',
     numImages: 1,
     imageName: 'reactbodyhighlighter',
     imageExtension: '.png',

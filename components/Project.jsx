@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { PROJECTS_DATA } from '../constants';
+import { BADGE_ICONS, PROJECTS_DATA } from '../constants';
 import Badge from './Badge';
-import styles from './card.module.css';
+import styles from './project.module.css';
 
 export default function Project({ project }) {
   const router = useRouter();
   const key = project.toUpperCase();
 
   /* Project Data */
-  const { title, description, github, demo, numImages, imageName } = PROJECTS_DATA[key];
+  const { tags, title, description, github, demo, numImages, imageName } = PROJECTS_DATA[key];
 
   /* Counter for current image displayed */
   const [index, setIndex] = useState(1);
@@ -34,6 +34,10 @@ export default function Project({ project }) {
     }
   };
 
+  const handleDotChange = (index) => {
+    setIndex(index);
+  };
+
   const renderDots = () => {
     const dots = [];
 
@@ -54,24 +58,11 @@ export default function Project({ project }) {
     return dots;
   };
 
-  const handleDotChange = (index) => {
-    setIndex(index);
-  };
-
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        minHeight: '100vh',
-        padding: '2rem',
-        backgroundColor: '#f8f8f8',
-      }}
-    >
-      <div className={styles.card} style={{ marginTop: '0.5rem', marginBottom: 0 }}>
+    <div className={styles.container}>
+      <div className={styles.card}>
         <div className={styles.back}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+          <div className={styles['link-wrapper']}>
             <div className={styles.link}>
               <button
                 className={styles['demo-button']}
@@ -107,58 +98,35 @@ export default function Project({ project }) {
             &larr; GO BACK
           </button>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div className={styles.carousel}>
           <span className={styles['navigation-arrow']} onClick={handlePreviousPicture}>
             ❮
           </span>
-          <img
-            src={`/images/${imageName}${index}.PNG`}
-            className={styles.image}
-            style={{ pointerEvents: 'none', margin: '0 3rem' }}
-            alt={`${project}${index}`}
-          />
+          <img src={`/images/${imageName}${index}.PNG`} className={styles.image} alt={`${project}${index}`} />
           <span className={styles['navigation-arrow']} onClick={handleNextPicture}>
             ❯
           </span>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            padding: '1.5rem',
-            borderBottom: '1px solid #e8e8e8',
-            marginBottom: '1rem',
-          }}
-        >
-          {renderDots()}
-        </div>
+        <div className={styles['dot-wrapper']}>{renderDots()}</div>
 
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'flex-end',
-            gap: '1rem',
-            marginTop: '1rem',
-          }}
-        >
-          <Badge icon='devicon-react-original' text='React' />
+        <div className={styles['badge-wrapper']}>
+          {tags.map((technology, index) => {
+            const graphic = BADGE_ICONS[technology];
+
+            if (graphic == null) return null;
+
+            if (graphic.devicon) {
+              return <Badge icon={graphic.link} text={technology} key={index} />;
+            } else {
+              return <Badge image={graphic.link} text={technology} key={index} />;
+            }
+          })}
+          {/* <Badge icon='devicon-react-original' text='React' />
           <Badge image='/images/icons/adonisjs.svg' text='Adonis JS' />
-          <Badge icon='devicon-postgresql-plain' text='PostgreSQL' />
+          <Badge icon='devicon-postgresql-plain' text='PostgreSQL' /> */}
         </div>
 
-        <p
-          style={{
-            fontFamily: 'Montserrat',
-            fontSize: '1.2rem',
-            color: '#8f8f8f',
-            margin: 0,
-            fontWeight: 600,
-            marginTop: '1rem',
-          }}
-        >
-          {title.toUpperCase()}
-        </p>
+        <p className={styles.title}>{title.toUpperCase()}</p>
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
       </div>
     </div>
