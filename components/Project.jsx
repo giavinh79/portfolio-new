@@ -90,11 +90,7 @@ export default function Project({ project }) {
               </a>
             </div>
           </div>
-          <button
-            className={styles['button']}
-            onClick={() => router.push('/')}
-            style={{ marginLeft: 'auto', backgroundColor: '#ac4a4f' }}
-          >
+          <button className={styles['button']} onClick={() => router.push('/')}>
             &larr; GO BACK
           </button>
         </div>
