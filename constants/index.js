@@ -1,51 +1,48 @@
-// export const PROJECT = {
-//   PLOP: 'PLOP',
-//   NONE: 'NONE',
-// };
-
 /* Import new project data here and update Projects.jsx accordingly */
 export const PROJECTS_DATA = {
   PLOP: {
     title: 'Plop',
     description:
-      'Open-source project management web application for teams. It is implemented with <strong>React.js</strong> for the frontend, <strong>Adonis.js</strong> (Node.js framework) as the REST API backend, <strong>Cloudinary</strong> for image storage, and a <strong>PostgreSQL</strong> database. Some features include task drag-and-drop dashboards, administration hierarchy, chat, logs, and analytics.',
+      'Open-source project management web application for teams. It is implemented with <strong>React.js</strong> for the frontend, <strong>Adonis.js</strong> (Node.js framework) as the REST API backend, <strong>Cloudinary</strong> for image storage, and a <strong>PostgreSQL</strong> database. It uses <strong>Ant Design</strong> for UI styling. Some features include task drag-and-drop dashboards, administration hierarchy, chat, logs, and analytics.',
     github: 'https://github.com/GV79/Plop',
     demo: 'https://plop.team',
-    numImages: 5,
+    numImages: 6,
     imageName: 'plop',
     imageExtension: '.png',
-    tags: ['react', 'javascript', 'adonis', 'html', 'mysql', 'postgresql', 'orm', 'ant design', 'node.js', 'css'],
+    tags: ['react', 'javascript', 'adonis', 'postgresql', 'orm', 'ant design', 'node.js', 'css'],
   },
   CODECONNECT: {
     title: 'CodeConnect',
     description:
-      'Platform for facilitating collaboration between software developers and establishing an online portfolio. The web app is built using <strong>React.js</strong>, <strong>TypeScript</strong>, <strong>Redux Toolkit</strong> (for state management) and is styled using <strong>Material-UI</strong> and <strong>styled-components</strong>. The mobile app is built with <strong>React Native</strong>. The backend API is built with <strong>Django (Python)</strong>.',
+      'Platform for facilitating collaboration between software developers and establishing an online portfolio. The web app is built using <strong>React.js</strong>, <strong>TypeScript</strong>, <strong>Redux Toolkit</strong> (for state management) and is styled using <strong>Material-UI</strong> and <strong>styled-components</strong>. The mobile app is built with <strong>React Native</strong>. The backend REST API is built with <strong>Django (Python)</strong>. It is still a work in progress (WIP).',
     numImages: 2,
-    imageName: 'plop',
+    imageName: 'codeconnect',
     imageExtension: '.png',
     tags: ['react', 'javascript', 'adonis', 'html', 'mysql', 'postgresql', 'orm', 'ant design', 'node.js', 'css'],
   },
   GYMTRACK: {
     title: 'GymTrack',
     description:
-      "This progressive web application allows users to track and manage their fitness journey easily on mobile or web. It is written using <strong>React.js</strong>, <strong>TypeScript</strong>, and <strong>Redux Toolkit</strong>. For styling, <strong>Reactstrap</strong> (Bootstrap) and <strong>SASS/SCSS</strong> (with BEM methodology) is used. It connects with <strong>Google's Firebase</strong> for authentication and uses <strong>MongoDB</strong>   for application storage (ie. user credentials, routines... etc.).",
-    numImages: 2,
-    imageName: 'plop',
+      "This progressive web application allows users to track and manage their fitness journey easily on mobile or web. It is written using <strong>React.js</strong>, <strong>TypeScript</strong>, and <strong>Redux Toolkit</strong>. For styling, <strong>Reactstrap</strong> (Bootstrap) and <strong>SASS/SCSS</strong> (with BEM methodology) is used. It connects with <strong>Google's Firebase</strong> for authentication and uses <strong>MongoDB</strong>   for application storage (ie. user credentials, routines... etc.). It is still a work in progress (WIP).",
+    github: 'https://github.com/GV79/GymTrack',
+    numImages: 3,
+    imageName: 'gymtrack',
     imageExtension: '.png',
     tags: ['react', 'javascript', 'adonis', 'html', 'mysql', 'postgresql', 'orm', 'ant design', 'node.js', 'css'],
   },
   'REACT BODY HIGHLIGHTER': {
     title: 'React Body Highlighter',
     description:
-      'Open-source <strong>React.js</strong> NPM package that provides posterior (back) and anterior (front) views of a body model and accepts a variety of props to highlight different muscles. I created this as I could not find a compatible solution to use myself for my React.js fitness web application (GymTrack). It is written in <strong>TypeScript</strong> to provide type safety and IntelliSense.',
+      'Open-source <strong>React.js</strong> NPM package that provides posterior (back) and anterior (front) views of a body model and accepts a variety of props to highlight different muscles. I created this as I could not find a compatible solution to use myself for my React.js fitness web application (GymTrack). This NPM package is also written in <strong>TypeScript</strong> to provide type safety and IntelliSense.',
     numImages: 2,
     imageName: 'reactbodyhighlighter',
     imageExtension: '.png',
     tags: ['react', 'javascript', 'adonis', 'html', 'mysql', 'postgresql', 'orm', 'ant design', 'node.js', 'css'],
   },
   'LEGO-FRONTEND': {
+    title: 'Lego ML Project',
     description:
-      '<span style="font-weight: bold">Lego Project:</span> This is a design project done for school which is composed of many different modules (frontend, backend, data extractor module, reinforcement environment...). I mainly worked on the front-end application for the project demo, the data extraction module, and the machine learning environment\'s reward function. The main RL environment repo is hosted privately. The first image represents the basic frontend demo skeleton. The project\'s code and deployment link can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-ml-frontend" rel="noopener noreferrer" aria-label="Lego Frontend">here</a> and was created using <span style="color: #32738c">React.js</span> and <span style="color: #32738c">Material-UI</span>. The second image represents the backend data scraper however has been deprecated due to no longer needing this type of data. Written with <span style="color: #32738c">Node.js</span>, this web-scraping and API calling application\'s repo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-data-collection" rel="noopener noreferrer" aria-label="Lego Data Scraper">here</a>. Finally, the third image represents some output from the build stability reward function I designed for the Lego RL environment. This module was programmed in <span style="color: #32738c">Python 3</span> using PyCharm. Code for this project along with the Jupyter Notebook can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-build-stability" rel="noopener noreferrer" aria-label="Lego Build Stability function">here.</a>',
+      'This was a design project done for school which is composed of many different modules (frontend, backend, data extractor module, reinforcement environment...). I mainly worked on the front-end application for the project demo, the data extraction module, and the machine learning environment\'s reward function. The main RL environment repo is hosted privately. The first image represents the basic frontend demo skeleton. The project\'s code and deployment link can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-ml-frontend" rel="noopener noreferrer" aria-label="Lego Frontend">here</a> and was created using <span style="color: #32738c">React.js</span> and <span style="color: #32738c">Material-UI</span>. The second image represents the backend data scraper however has been deprecated due to no longer needing this type of data. Written with <span style="color: #32738c">Node.js</span>, this web-scraping and API calling application\'s repo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-data-collection" rel="noopener noreferrer" aria-label="Lego Data Scraper">here</a>. Finally, the third image represents some output from the build stability reward function I designed for the Lego RL environment. This module was programmed in <span style="color: #32738c">Python 3</span> using PyCharm. Code for this project along with the Jupyter Notebook can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-build-stability" rel="noopener noreferrer" aria-label="Lego Build Stability function">here.</a>',
     numImages: 3,
     imageName: 'lego',
     imageExtension: '.png',
@@ -53,7 +50,7 @@ export const PROJECTS_DATA = {
   },
   'BANANA-RIPENESS-DETECTOR': {
     description:
-      '<span style="font-weight: bold">Banana Ripeness Detector:</span> Open-ended CIS4720 (image processing) project for detecting the ripeness of a banana. This <a class="description-link" target="_blank" rel="noopener noreferrer" href="http://stark-gorge-37151.herokuapp.com/" aria-label="Banana Ripeness Detector">web application </a> makes it easy to test whether a banana is ripe, overripe, or underripe. It may take some time to initially load the website due to being deployed using a free Heroku dyno. This project was created using <span style="color: #32738c">React.js</span> (frontend) and <span style="color: #32738c">Python 3</span> (backend). I worked on the algorithm and front-end design for this project. Code and project dependencies can be found <a class="description-link" target="_blank" href="https://github.com/peken97/BananaRipenessDetector" rel="noopener noreferrer" aria-label="Banana Ripeness Detector GitHub">here.</a>',
+      'Open-ended CIS4720 (image processing) project for detecting the ripeness of a banana. The web application makes it easy to test whether a banana is ripe, overripe, or underripe. This project was created using <strong>React.js</strong> (frontend) and <span style="color: #32738c">Python 3</span> (backend). I personally worked on the Python algorithm and design for this project while my group members worked on the frontend and backend.',
     numImages: 1,
     imageName: 'banana',
     imageExtension: '.png',

@@ -1,14 +1,12 @@
 /*
  * Page for clicked projects
- * Similar to index page structure (index.js)
  */
 
 import Head from 'next/head';
-import Introduction from '../../components/Introduction';
 import Project from '../../components/Project';
 import { useRouter } from 'next/router';
 
-const Post = () => {
+export default function ProjectPage() {
   const router = useRouter();
   const { project } = router.query;
 
@@ -25,12 +23,12 @@ const Post = () => {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
+        {project && <link rel='preload' href={`/images/${project}1.PNG`} as='image' /> && (
+          <meta name='description' content={`Project page for ${project}`} />
+        )}
       </Head>
 
-      <main>
-        {/* <Introduction /> */}
-        <Project title={project} images={5} description='Blah Blah' technologies={['React.js', 'Redux']} />
-      </main>
+      <main>{project && <Project project={project} />}</main>
 
       <style jsx global>{`
         html,
@@ -47,6 +45,4 @@ const Post = () => {
       `}</style>
     </div>
   );
-};
-
-export default Post;
+}

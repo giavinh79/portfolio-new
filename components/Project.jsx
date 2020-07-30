@@ -1,16 +1,64 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { PROJECTS_DATA } from '../constants';
 import Badge from './Badge';
 import styles from './card.module.css';
 
-export default function Project() {
+export default function Project({ project }) {
   const router = useRouter();
+  const key = project.toUpperCase();
 
-  const title = PROJECTS_DATA['PLOP'].title;
-  const description = PROJECTS_DATA['PLOP'].description;
-  const image = '/images/plop1.PNG';
-  const github = PROJECTS_DATA['PLOP'].github;
-  const demo = PROJECTS_DATA['PLOP'].demo;
+  console.log(key);
+
+  /* Project Data */
+  const { title, description, github, demo, numImages, imageName } = PROJECTS_DATA[key];
+
+  /* Counter for current image displayed */
+  const [index, setIndex] = useState(1);
+
+  useEffect(() => {
+    router.prefetch('/');
+  }, []);
+
+  const handleNextPicture = () => {
+    if (index === numImages) {
+      setIndex(1);
+    } else {
+      setIndex(index + 1);
+    }
+  };
+
+  const handlePreviousPicture = () => {
+    if (index === 1) {
+      setIndex(numImages);
+    } else {
+      setIndex(index - 1);
+    }
+  };
+
+  const renderDots = () => {
+    const dots = [];
+
+    for (let i = 1; i < numImages + 1; i++) {
+      if (i === index) {
+        dots.push(
+          <span
+            key={i}
+            index={i}
+            className={`${styles.dot} ${styles.active}`}
+            onClick={() => handleDotChange(i)}
+          ></span>
+        );
+      } else {
+        dots.push(<span key={i} index={i} className={styles.dot} onClick={() => handleDotChange(i)}></span>);
+      }
+    }
+    return dots;
+  };
+
+  const handleDotChange = (index) => {
+    setIndex(index);
+  };
 
   return (
     <div
@@ -23,42 +71,57 @@ export default function Project() {
         backgroundColor: '#f8f8f8',
       }}
     >
-      <div className={styles.card} style={{ width: '90%', marginTop: '0.5rem', marginBottom: 0 }}>
+      <div className={styles.card} style={{ marginTop: '0.5rem', marginBottom: 0 }}>
         <div className={styles.back}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-            <div className={styles.github}>
+            <div className={styles.link}>
               <button
                 className={styles['demo-button']}
+                disabled={github == null}
                 onClick={() => window.open(github, '_blank') || window.location.replace(github)}
               >
-                {/* <i className='fa fa-github' aria-hidden='true'></i> */}
+                <i className='fa fa-github' aria-hidden='true'></i>
                 GITHUB
               </button>
               <a href={github} target='_blank' rel='noopener noreferrer'>
-                {github.substring(8, github.length)}
+                {github ? github.substring(8, github.length) : 'Private'}
               </a>
             </div>
-            <div className={styles.demo}>
+            <div className={styles.link}>
               <button
                 className={styles['demo-button']}
+                disabled={demo == null}
                 onClick={() => window.open(demo, '_blank') || window.location.replace(demo)}
               >
-                {/* <i className='fa fa-globe' aria-hidden='true'></i> */}
+                <i className='fa fa-globe' aria-hidden='true'></i>
                 DEMO
               </button>
               <a href={demo} target='_blank' rel='noopener noreferrer'>
-                {demo.substring(8, demo.length)}
+                {demo ? demo.substring(8, demo.length) : 'N/A'}
               </a>
             </div>
           </div>
-          <button className={styles['button']} onClick={() => router.push('/')} style={{ marginLeft: 'auto' }}>
+          <button
+            className={styles['button']}
+            onClick={() => router.push('/')}
+            style={{ marginLeft: 'auto', backgroundColor: '#ac4a4f' }}
+          >
             &larr; GO BACK
           </button>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <span className={styles['navigation-arrow']}>❮</span>
-          <img src={image} className={styles.image} style={{ pointerEvents: 'none', margin: '0 1.5rem' }} />
-          <span className={styles['navigation-arrow']}>❯</span>
+          <span className={styles['navigation-arrow']} onClick={handlePreviousPicture}>
+            ❮
+          </span>
+          <img
+            src={`/images/${imageName}${index}.PNG`}
+            className={styles.image}
+            style={{ pointerEvents: 'none', margin: '0 3rem' }}
+            alt={`${project}${index}`}
+          />
+          <span className={styles['navigation-arrow']} onClick={handleNextPicture}>
+            ❯
+          </span>
         </div>
         <div
           style={{
@@ -69,10 +132,7 @@ export default function Project() {
             marginBottom: '1rem',
           }}
         >
-          <span className={styles.dot}></span>
-          <span className={styles.dot}></span>
-          <span className={styles.dot}></span>
-          <span className={styles.dot}></span>
+          {renderDots()}
         </div>
 
         <div

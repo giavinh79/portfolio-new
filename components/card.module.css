@@ -86,6 +86,10 @@
   text-decoration: none;
   font-family: Helvetica, Arial, sans-serif;
   color: #2b3137;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .back {
@@ -136,11 +140,15 @@
   outline: none;
   font-weight: 700;
   font-family: Montserrat;
-  width: 6rem;
+  width: 6.5rem;
 }
 
-.github,
-.demo {
+.demo-button:disabled,
+.demo-button[disabled] {
+  cursor: not-allowed;
+}
+
+.link {
   display: flex;
   align-items: center;
   background-color: #ffffff;
@@ -150,14 +158,13 @@
   border-radius: 4px;
 }
 
-/* .github i,
-.demo i {
+.link i {
   font-size: 1.3rem;
-  margin-right: 0.7rem;
-} */
+  margin-left: 0.3rem;
+  margin-right: 0.4rem;
+}
 
-.github p,
-.demo p {
+.link p {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
     'Helvetica Neue', sans-serif;
   font-weight: 600;
@@ -165,8 +172,7 @@
   margin: 0;
 }
 
-.github a,
-.demo a {
+.link a {
   font-size: 1rem;
   font-weight: 600;
   margin-left: 1rem;
@@ -178,20 +184,16 @@
 
 /* Mobile and Smaller Screen Styles */
 
-@media only screen and (max-width: 1450px) {
-  .github a,
-  .demo a {
-    display: none;
-  }
-
-  .github,
-  .demo {
-    padding: 0;
-  }
-}
-
 @media only screen and (max-width: 1150px) {
   .card {
     min-width: auto;
+  }
+
+  .link a {
+    display: none;
+  }
+
+  .link {
+    padding: 0;
   }
 }
