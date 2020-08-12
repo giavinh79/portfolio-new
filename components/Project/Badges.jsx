@@ -1,6 +1,6 @@
-import { BADGE_ICONS } from '../constants';
-import styles from './badges.module.css';
+import { BADGE_ICONS } from '../../constants';
 import Badge from './Badge';
+import styles from './badges.module.css';
 
 function Badges({ tags }) {
   return (
@@ -10,11 +10,11 @@ function Badges({ tags }) {
 
         if (graphic == null) return null;
 
-        if (graphic.devicon) {
-          return <Badge icon={graphic.link} text={technology} key={index} />;
-        } else {
-          return <Badge image={graphic.link} text={technology} key={index} />;
-        }
+        return graphic.devicon ? (
+          <Badge icon={graphic.link} text={technology} key={index} />
+        ) : (
+          <Badge image={graphic.link} text={technology} key={index} />
+        );
       })}
     </div>
   );

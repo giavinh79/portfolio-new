@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { BADGE_ICONS, PROJECTS_DATA } from '../constants';
-import Badge from './Badge';
-import styles from './project.module.css';
+import { PROJECTS_DATA } from '../../constants';
 import Badges from './Badges';
+import styles from './project.module.css';
 
 export default function Project({ project }) {
   const router = useRouter();
@@ -96,29 +95,23 @@ export default function Project({ project }) {
           </button>
         </div>
         <div className={styles.carousel}>
-          <span className={styles['navigation-arrow']} onClick={handlePreviousPicture}>
+          <span
+            className={styles['navigation-arrow']}
+            onClick={handlePreviousPicture}
+            style={{ display: numImages > 1 ? 'block' : 'none' }}
+          >
             ❮
           </span>
           <img src={`/images/${imageName}${index}.PNG`} className={styles.image} alt={`${project}${index}`} />
-          <span className={styles['navigation-arrow']} onClick={handleNextPicture}>
+          <span
+            className={styles['navigation-arrow']}
+            onClick={handleNextPicture}
+            style={{ display: numImages > 1 ? 'block' : 'none' }}
+          >
             ❯
           </span>
         </div>
         <div className={styles['dot-wrapper']}>{renderDots()}</div>
-
-        {/* <div className={styles['badge-wrapper']}>
-          {tags.map((technology, index) => {
-            const graphic = BADGE_ICONS[technology];
-
-            if (graphic == null) return null;
-
-            if (graphic.devicon) {
-              return <Badge icon={graphic.link} text={technology} key={index} />;
-            } else {
-              return <Badge image={graphic.link} text={technology} key={index} />;
-            }
-          })}
-        </div> */}
         <Badges tags={tags} />
 
         <p className={styles.title}>{title.toUpperCase()}</p>

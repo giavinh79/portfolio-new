@@ -95,16 +95,6 @@ export const BADGE_ICONS = {
   },
 };
 
-// 'react',
-// 'typescript',
-// 'python',
-// 'postgresql',
-// 'react native',
-// 'django',
-// 'redux',
-// 'styled-components',
-// 'material ui',
-
 /* Import new project data here and update Projects.jsx accordingly */
 export const PROJECTS_DATA = {
   PLOP: {

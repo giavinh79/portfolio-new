@@ -18,8 +18,8 @@ export default function SocialMedia() {
       <a
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/gv79'
-        aria-label='GitHub'
+        href='https://github.com/GV79/portfolio-new'
+        aria-label='GitHub Link to Project'
         className={styles.iconWrapper}
       >
         <i className={`${styles.icon} fa fa-github`}></i>

@@ -113,15 +113,7 @@
 }
 
 .button:hover {
-  background-color: #115fb8;
-}
-
-.button:disabled,
-.button[disabled] {
-  cursor: not-allowed;
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
+  background-color: #863f42;
 }
 
 .back {
@@ -165,6 +157,9 @@
 .demo-button:disabled,
 .demo-button[disabled] {
   cursor: not-allowed;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 
 .link {

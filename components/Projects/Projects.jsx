@@ -1,4 +1,4 @@
-import { PROJECTS_DATA } from '../constants';
+import { PROJECTS_DATA } from '../../constants';
 import Card from './Card';
 import styles from './projects.module.css';
 

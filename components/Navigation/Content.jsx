@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Skills from './Skills';
-import Projects from './Projects';
+import Skills from '../Skills/Skills';
+import Projects from '../Projects/Projects';
 import styles from './content.module.css';
 
 const CONTENT = {
