@@ -46,6 +46,16 @@ export default function Projects() {
         title={PROJECTS_DATA['LEGO'].title}
         description={PROJECTS_DATA['LEGO'].description}
       />
+      <Card
+        image='/images/passport1.PNG'
+        title={PROJECTS_DATA['PASSPORT'].title}
+        description={PROJECTS_DATA['PASSPORT'].description}
+      />
+      <Card
+        image='/images/french1.PNG'
+        title={PROJECTS_DATA['FRENCH CONJUGATOR'].title}
+        description={PROJECTS_DATA['FRENCH CONJUGATOR'].description}
+      />
     </Masonry>
   );
 }

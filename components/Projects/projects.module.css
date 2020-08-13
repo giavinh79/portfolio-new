@@ -21,11 +21,12 @@
 /* Mobile View */
 
 @media only screen and (max-width: 500px) {
-  .grid {
+  .masonry-grid {
     padding: 1rem 0 0 0;
+    margin-left: 0;
   }
 
-  .column {
-    margin: 0;
+  .masonry-grid_column {
+    padding-left: 0;
   }
 }

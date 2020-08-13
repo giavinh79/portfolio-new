@@ -57,6 +57,10 @@ export const BADGE_ICONS = {
     devicon: true,
     link: 'devicon-npm-original-wordmark colored',
   },
+  'material ui': {
+    devicon: false,
+    link: '/images/icons/materialui.svg',
+  },
   mongodb: {
     devicon: true,
     link: 'devicon-mongodb-plain colored',
@@ -153,32 +157,38 @@ export const PROJECTS_DATA = {
   LEGO: {
     title: 'Lego',
     description:
-      'This was a design project done for a course which was composed of many different modules (frontend, backend, data extractor module, and reinforcement environment). I worked on the front-end application for the project demo, the data extraction module, and the machine learning environment\'s reward function. The first image represents the basic frontend demo skeleton. The project\'s code and deployment link can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-ml-frontend" rel="noopener noreferrer" aria-label="Lego Frontend">here</a> and was created using <span style="color: #32738c">React.js</span> and <span style="color: #32738c">Material-UI</span>. The second image represents the backend data scraper however has been deprecated due to no longer needing this type of data. Written with <span style="color: #32738c">Node.js</span>, this web-scraping and API calling application\'s repo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-data-collection" rel="noopener noreferrer" aria-label="Lego Data Scraper">here</a>. Finally, the third image represents some output from the build stability reward function I designed for the Lego RL environment. This module was programmed in <span style="color: #32738c">Python 3</span> using PyCharm. Code for this project along with the Jupyter Notebook can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-build-stability" rel="noopener noreferrer" aria-label="Lego Build Stability function">here.</a>',
-    numImages: 3,
+      'This was a group design project done for a course which was composed of many different modules (frontend, backend, data extractor module, and reinforcement environment). I worked on the front-end application for the project demo, the data extraction module, and the machine learning environment\'s reward function. The first image represents the basic frontend demo skeleton. The frontend app and demo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-ml-frontend" rel="noopener noreferrer" aria-label="Lego Frontend">here</a> and was created using <strong>React.js</strong> and <strong>Material-UI</strong>. The data extraction module was written in <strong>Node.js</strong>. This web-scraping and API calling application\'s repo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-data-collection" rel="noopener noreferrer" aria-label="Lego Data Scraper">here</a>. Finally, the build stability reward function I designed for the reinforcement learning environment was programmed in <strong>Python 3</strong>. Code for this module along with the Jupyter Notebook can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-build-stability" rel="noopener noreferrer" aria-label="Lego Build Stability function">here.</a>',
+    github: 'https://github.com/GV79/lego-ml-frontend',
+    demo: 'https://wizardly-wright-3e4b68.netlify.app',
+    numImages: 1,
     imageName: 'lego',
     imageExtension: '.png',
-    tags: ['react', 'javascript', 'material-ui', 'redux', 'python', 'node.js', 'webscraping'],
+    tags: ['react', 'javascript', 'material ui', 'redux', 'python', 'node.js', 'webscraping'],
   },
   'BANANA RIPENESS DETECTOR': {
     title: 'Banana Ripeness Detector',
     description:
-      'Open-ended CIS4720 (image processing) project for detecting the ripeness of a banana. The web application makes it easy to test whether a banana is ripe, overripe, or underripe. This project was created using <strong>React.js</strong> (frontend) and <span style="color: #32738c">Python 3</span> (backend). I personally worked on the Python algorithm and design for this project while my group members worked on the frontend and backend.',
+      'Open-ended CIS4720 (image processing) project for detecting the ripeness of a banana. The web application makes it easy to test whether a banana is ripe, overripe, or underripe. This project was created using <strong>React.js</strong> (frontend) and <strong>Python 3</strong> (backend). I personally worked on the Python algorithm and design for this project while my group members worked on the frontend and backend components. The initial load for the demo may take a while as it is hosted for free using Heroku Dynos.',
+    github: 'https://github.com/GV79/bananascript',
+    demo: 'http://stark-gorge-37151.herokuapp.com',
     numImages: 1,
     imageName: 'banana',
     imageExtension: '.png',
     tags: ['react', 'javascript', 'python'],
   },
   PASSPORT: {
+    title: 'Passport',
     description:
-      '<span style="font-weight: bold">Passport 4.0:</span> This project was designed to completely reimagine the UI and UX of NCR\'s product Passport in <span style="color: #32738c">React.js</span>. Passport is a product which allows depositing checks at various locations however it was plagued by poor routing, UX, and design with JSPs (Java Server Pages). This application was developed by a group of co-ops for a two day long hackathon (NCR\'s Global Hackathon) and consists of a frontend web app, backend (<span style="color: #32738c">Node.js</span>), and mobile app (<span style="color: #32738c">React Native</span>). In addition to the frontend overhaul, the mobile app used web sockets and QR code scanning to show a potential solution to a problem a teller might have using Passport (if the scanner breaks, the teller may take a picture of the check and send it directly to the correct deposit). I mainly worked on the frontend design and functionality. Code and project dependencies can be found <a class="description-link" target="_blank" href="https://github.com/GV79/Passport-4.0" rel="noopener noreferrer" aria-label="Passport-4.0 GitHub">here.</a> For more information about the project and its functionality, check out it\'s video <a class="description-link" target="_blank" href="https://drive.google.com/drive/folders/1fKULu7cGncxJtD5hclkiOCwozIWdttxj?fbclid=IwAR3fvf87TdViuHd2iH-KcyvfyUCqCMaGF2C1e49KyjY5O2ZhqBVbME6lfW4" rel="noopener noreferrer" aria-label="Passport-4.0 Video">here.</a> As it was a hackathon, the code structure and styling could be made a lot better.',
+      'This project was designed to revamp the UI and UX of NCR\'s product Passport in <strong>React.js</strong>. Passport is a product which allows depositing checks at various locations however it was plagued by poor routing, UX, and design with JSPs (Java Server Pages). This application was developed by a group of co-ops for a two day long hackathon (NCR\'s Global Hackathon) and consists of a frontend web application, backend (<strong>Node.js</strong>), and mobile app (<strong>React Native</strong>). A feature using websockets and QR code scanning was added to solve a problem a teller might run into where the scanner breaks. Now, the teller may take a picture of the check and send it directly to the correct deposit. I mainly worked on the frontend design and functionality. For more information about the project and its functionality, check out the video <a href="https://drive.google.com/drive/folders/1fKULu7cGncxJtD5hclkiOCwozIWdttxj?fbclid=IwAR3fvf87TdViuHd2iH-KcyvfyUCqCMaGF2C1e49KyjY5O2ZhqBVbME6lfW4" target="_blank" rel="noopener noreferrer" aria-label="Passport-4.0 Video">here.</a>',
+    github: 'https://github.com/GV79/Passport-4.0',
     numImages: 5,
     imageName: 'passport',
     imageExtension: '.jpg',
-    tags: ['react', 'javascript', 'html', 'css', 'material-ui'],
+    tags: ['react', 'javascript', 'html', 'css', 'material ui'],
   },
   'MR.FLATBEDS': {
     description:
-      '<span style="font-weight: bold">MR.Flatbeds:</span> This is currently a WIP and currently in a private repository. I used <span style="color: #32738c">React.js</span> to overhaul the frontend design of this company landing page. Accessibility, responsiveness, and loading times (optimizing image sizes) were also improved. The first picture shows my revamp to the company\'s homepage and the second picture shows the original.',
+      'This is currently a WIP and currently in a private repository. I used <span style="color: #32738c">React.js</span> to overhaul the frontend design of this company landing page. Accessibility, responsiveness, and loading times (optimizing image sizes) were also improved. The first picture shows my revamp to the company\'s homepage and the second picture shows the original.',
     numImages: 2,
     imageName: 'mrflatbeds',
     imageExtension: '.jpg',
@@ -200,7 +210,7 @@ export const PROJECTS_DATA = {
     imageExtension: '.png',
     tags: ['node.js', 'socket.io', 'express', 'javascript', 'mongodb', 'nosql', 'html', 'css'],
   },
-  'MARK-MANAGEMENT': {
+  'MARK MANAGEMENT': {
     description:
       '<span style="font-weight: bold">Mark Management:</span> A full stack website I created for fun in order to help users manage and predict their grades (no longer hosted). It was created using <span style="color: #32738c">HTML</span>, <span style="color: #32738c">CSS</span>, <span style="color: #32738c">Javascript</span>, <span style="color: #32738c">Java (Servlets and JSPs)</span> and <span style="color: #32738c">mySQL</span>. It is still a WIP (Work in Progress). Functionality includes: Pages set up, form validation, signing up, logging in, responsive design, and adding/removing grades. To do: enhance grades page, SQL injection protection, and cookies. Test with username: \'user\' and password: \'default\'. Code can be found <a class="description-link" target="_blank" href="https://github.com/GV79/markmanagement" rel="noopener noreferrer">here.</a>',
     numImages: 1,
@@ -208,7 +218,7 @@ export const PROJECTS_DATA = {
     imageExtension: '.png',
     tags: ['java', 'jsp', 'servlet', 'html', 'css', 'mysql', 'sql'],
   },
-  'JAVA-STORE': {
+  'JAVA STORE': {
     description:
       '<span style="font-weight: bold">Java Store:</span> <a class="description-link" target="_blank" rel="noopener noreferrer" href="https://github.com/GV79/JavaStore" aria-label="Java Electronic Store">Java program</a> which allows users to store books/electronics, search the store using filters, and supports saving to/loading from text files. The program uses object-oriented concepts (polymorphism, encapsulation, abstraction, and inheritance), data structures like HashMaps and ArrayLists, Swing for the GUI, and has defensive programming/exception handling.',
     numImages: 4,
@@ -224,10 +234,11 @@ export const PROJECTS_DATA = {
     imageExtension: '.jpg',
     tags: ['c', 'python', 'sql', 'mysql'],
   },
-  'FRENCH-CONJUGATOR': {
+  'FRENCH CONJUGATOR': {
+    title: 'French Conjugator',
     description:
-      '<span style="font-weight: bold">French Conjugator:</span> An Android app I created for fun to help users with their french conjugation skills. It was created using <span style="color: #32738c">Java</span> in <span style="color: #32738c">Android Studio</span> and is still a WIP.',
-    numImages: 4,
+      'An <strong>Android</strong> app I created for fun to help users with their french conjugation skills. It was created using <strong>Java</strong> in Android Studio.',
+    numImages: 3,
     imageName: 'french',
     imageExtension: '.png',
     tags: ['java', 'android'],
