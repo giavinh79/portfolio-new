@@ -1,20 +1,21 @@
 /* Layout styles */
 
-.grid {
+.masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  padding: 1rem 1rem 0 1rem;
   margin-top: 1rem;
-  gap: 2rem;
+  padding: 1rem 2rem 0 2rem;
+  margin-left: -4rem;
+  width: auto;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  flex: 1;
-  margin: 0 1rem;
+.masonry-grid_column {
+  padding-left: 4rem;
+}
+
+.masonry-grid_column > div {
+  margin-bottom: 4rem;
 }
 
 /* Mobile View */

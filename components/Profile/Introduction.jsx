@@ -10,7 +10,7 @@ export default function Introduction() {
       </h1>
       <h2 className={styles.subtitle}>Computer Engineering (CENG:C)</h2>
       <div className={styles['portfolio-wrapper']}>
-        <img src='/portfoliosvg.svg' alt='portfolio abstract art' />
+        <img src='/images/abstract/portfoliosvg.svg' alt='portfolio abstract art' />
         <SocialMedia />
       </div>
     </div>

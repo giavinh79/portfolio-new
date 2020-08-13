@@ -150,22 +150,23 @@ export const PROJECTS_DATA = {
     imageExtension: '.png',
     tags: ['react', 'typescript', 'npm'],
   },
-  'LEGO-FRONTEND': {
-    title: 'Lego ML Project',
+  LEGO: {
+    title: 'Lego',
     description:
-      'This was a design project done for school which is composed of many different modules (frontend, backend, data extractor module, reinforcement environment...). I mainly worked on the front-end application for the project demo, the data extraction module, and the machine learning environment\'s reward function. The main RL environment repo is hosted privately. The first image represents the basic frontend demo skeleton. The project\'s code and deployment link can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-ml-frontend" rel="noopener noreferrer" aria-label="Lego Frontend">here</a> and was created using <span style="color: #32738c">React.js</span> and <span style="color: #32738c">Material-UI</span>. The second image represents the backend data scraper however has been deprecated due to no longer needing this type of data. Written with <span style="color: #32738c">Node.js</span>, this web-scraping and API calling application\'s repo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-data-collection" rel="noopener noreferrer" aria-label="Lego Data Scraper">here</a>. Finally, the third image represents some output from the build stability reward function I designed for the Lego RL environment. This module was programmed in <span style="color: #32738c">Python 3</span> using PyCharm. Code for this project along with the Jupyter Notebook can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-build-stability" rel="noopener noreferrer" aria-label="Lego Build Stability function">here.</a>',
+      'This was a design project done for a course which was composed of many different modules (frontend, backend, data extractor module, and reinforcement environment). I worked on the front-end application for the project demo, the data extraction module, and the machine learning environment\'s reward function. The first image represents the basic frontend demo skeleton. The project\'s code and deployment link can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-ml-frontend" rel="noopener noreferrer" aria-label="Lego Frontend">here</a> and was created using <span style="color: #32738c">React.js</span> and <span style="color: #32738c">Material-UI</span>. The second image represents the backend data scraper however has been deprecated due to no longer needing this type of data. Written with <span style="color: #32738c">Node.js</span>, this web-scraping and API calling application\'s repo can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-data-collection" rel="noopener noreferrer" aria-label="Lego Data Scraper">here</a>. Finally, the third image represents some output from the build stability reward function I designed for the Lego RL environment. This module was programmed in <span style="color: #32738c">Python 3</span> using PyCharm. Code for this project along with the Jupyter Notebook can be found <a class="description-link" target="_blank" href="https://github.com/GV79/lego-build-stability" rel="noopener noreferrer" aria-label="Lego Build Stability function">here.</a>',
     numImages: 3,
     imageName: 'lego',
     imageExtension: '.png',
-    tags: ['react', 'javascript', 'material-ui', 'html', 'redux', 'css', 'python', 'node.js', 'webscraping'],
+    tags: ['react', 'javascript', 'material-ui', 'redux', 'python', 'node.js', 'webscraping'],
   },
-  'BANANA-RIPENESS-DETECTOR': {
+  'BANANA RIPENESS DETECTOR': {
+    title: 'Banana Ripeness Detector',
     description:
       'Open-ended CIS4720 (image processing) project for detecting the ripeness of a banana. The web application makes it easy to test whether a banana is ripe, overripe, or underripe. This project was created using <strong>React.js</strong> (frontend) and <span style="color: #32738c">Python 3</span> (backend). I personally worked on the Python algorithm and design for this project while my group members worked on the frontend and backend.',
     numImages: 1,
     imageName: 'banana',
     imageExtension: '.png',
-    tags: ['react', 'javascript', 'python', 'html', 'css'],
+    tags: ['react', 'javascript', 'python'],
   },
   PASSPORT: {
     description:

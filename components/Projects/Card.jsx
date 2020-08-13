@@ -14,7 +14,7 @@ export default function Card({ description, image, title }) {
       />
       <p className={styles.title}>{title}</p>
       <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
-      <button className={styles.button} onClick={() => router.push(`/projects/${title.toLowerCase()}`)}>
+      <button tabIndex='0' className={styles.button} onClick={() => router.push(`/projects/${title.toLowerCase()}`)}>
         VIEW DETAILS &rarr;
       </button>
     </div>
