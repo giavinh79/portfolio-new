@@ -17,7 +17,7 @@ export default function Home() {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
-        <link rel='prefetch' href='/docs/giavinhlam-1.png' as='image' />
+        <link rel='preload' href='/docs/giavinhlam-1.png' as='image' />
       </Head>
 
       <main>
