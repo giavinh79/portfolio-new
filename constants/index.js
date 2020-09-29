@@ -109,7 +109,6 @@ export const PROJECTS_DATA = {
     demo: 'https://plop.team',
     numImages: 6,
     imageName: 'plop',
-    imageExtension: '.png',
     tags: ['react', 'javascript', 'adonisjs', 'postgresql', 'ant design', 'node.js', 'styled-components'],
   },
   CODECONNECT: {
@@ -118,7 +117,6 @@ export const PROJECTS_DATA = {
       'Platform for facilitating collaboration between software developers and establishing an online portfolio. The web app is built using <strong>React.js</strong>, <strong>TypeScript</strong>, <strong>Redux Toolkit</strong> (for state management) and is styled using <strong>Material-UI</strong> and <strong>styled-components</strong>. The mobile app is built with <strong>React Native</strong>. The backend REST API is built with <strong>Django (Python)</strong>. It is still a work in progress (WIP).',
     numImages: 4,
     imageName: 'codeconnect',
-    imageExtension: '.png',
     tags: [
       'react',
       'typescript',
@@ -140,7 +138,6 @@ export const PROJECTS_DATA = {
     github: 'https://github.com/GV79/GymTrack',
     numImages: 3,
     imageName: 'gymtrack',
-    imageExtension: '.png',
     tags: ['react', 'typescript', 'sass', 'mongodb', 'node.js', 'express', 'firebase', 'bootstrap'],
   },
   'REACT BODY HIGHLIGHTER': {
@@ -151,7 +148,6 @@ export const PROJECTS_DATA = {
     demo: 'https://codesandbox.io/s/magical-kowalevski-rzw9d',
     numImages: 1,
     imageName: 'reactbodyhighlighter',
-    imageExtension: '.png',
     tags: ['react', 'typescript', 'npm'],
   },
   LEGO: {
@@ -162,7 +158,6 @@ export const PROJECTS_DATA = {
     demo: 'https://wizardly-wright-3e4b68.netlify.app',
     numImages: 1,
     imageName: 'lego',
-    imageExtension: '.png',
     tags: ['react', 'javascript', 'material ui', 'redux', 'python', 'node.js', 'webscraping'],
   },
   'BANANA RIPENESS DETECTOR': {
@@ -173,7 +168,6 @@ export const PROJECTS_DATA = {
     demo: 'http://stark-gorge-37151.herokuapp.com',
     numImages: 1,
     imageName: 'banana',
-    imageExtension: '.png',
     tags: ['react', 'javascript', 'python'],
   },
   PASSPORT: {
@@ -183,7 +177,6 @@ export const PROJECTS_DATA = {
     github: 'https://github.com/GV79/Passport-4.0',
     numImages: 5,
     imageName: 'passport',
-    imageExtension: '.jpg',
     tags: ['react', 'javascript', 'html', 'css', 'material ui'],
   },
   'MR.FLATBEDS': {
@@ -191,7 +184,6 @@ export const PROJECTS_DATA = {
       'This is currently a WIP and currently in a private repository. I used <span style="color: #32738c">React.js</span> to overhaul the frontend design of this company landing page. Accessibility, responsiveness, and loading times (optimizing image sizes) were also improved. The first picture shows my revamp to the company\'s homepage and the second picture shows the original.',
     numImages: 2,
     imageName: 'mrflatbeds',
-    imageExtension: '.jpg',
     tags: ['react', 'javascript', 'html', 'css', 'reactstrap'],
   },
   REYNOLDS: {
@@ -199,7 +191,6 @@ export const PROJECTS_DATA = {
       '<span style="font-weight: bold">Reynold\'s Digital Signage:</span> Open-ended CIS3750 project of sample digital signage. This <a class="description-link" target="_blank" rel="noopener noreferrer" href="http://socsreynolds.site" aria-label="Reynolds Digital Signage">website </a> (no longer deployed) comes with a full fledged login and signup system and allows admins to manipulate content for a dashboard. This project was created using <span style="color: #32738c">Node.js</span>, <span style="color: #32738c">HTML</span>, <span style="color: #32738c">CSS (Bootstrap)</span>, and <span style="color: #32738c">JavaScript (jQuery)</span>. <span style="color: #32738c">MongoDB</span> and <span style="color: #32738c">Cloudinary</span> were used for data storage (accounts, images... etc.). Additional modules and services such as <span style="color: #32738c">nodemailer</span> (for email signup system), <span style="color: #32738c">Dropzone.js</span> (file drag and drop capability) and <span style="color: #32738c">Openweather API</span> (for temperature information) were also used. Code and project dependencies can be found <a class="description-link" target="_blank" rel="noopener noreferrer" href="https://github.com/GV79/reynoldstest" aria-label="Reynolds Digital Signage GitHub">here.</a>',
     numImages: 5,
     imageName: 'signage',
-    imageExtension: '.png',
     tags: ['node.js', 'javascript', 'cloudinary', 'nodemailer', 'dropzone.js', 'html', 'css', 'mongodb', 'noSQL'],
   },
   'CHAT-CLIENT': {
@@ -207,7 +198,6 @@ export const PROJECTS_DATA = {
       '<span style="font-weight: bold">Chat Client:</span> This is a <a class="description-link" target="_blank" rel="noopener noreferrer" href="https://obscure-harbor-66476.herokuapp.com/" aria-label="Chat Client">chat client </a> web app I made for fun. It was created with <span style="color: #32738c">HTML</span>, <span style="color: #32738c">CSS (Bootstrap)</span>, <span style="color: #32738c">JavaScript (jQuery)</span>, <span style="color: #32738c">Node.js</span>, <span style="color: #32738c">Express</span>, and <span style="color: #32738c">Socket.IO</span>. The chat works for anonymous users and also has account functionality via <span style="color: #32738c">mongoDB</span>. The DB key is exposed on the GitHub repo so test with username: \'user\' and password: \'default\'. Code can be found <a class="description-link" target="_blank" href="https://github.com/GV79/chatclient" rel="noopener noreferrer">here.</a> Due to hosting settings, the website will initially take some time to load.',
     numImages: 2,
     imageName: 'ChatClient',
-    imageExtension: '.png',
     tags: ['node.js', 'socket.io', 'express', 'javascript', 'mongodb', 'nosql', 'html', 'css'],
   },
   'MARK MANAGEMENT': {
@@ -215,7 +205,6 @@ export const PROJECTS_DATA = {
       '<span style="font-weight: bold">Mark Management:</span> A full stack website I created for fun in order to help users manage and predict their grades (no longer hosted). It was created using <span style="color: #32738c">HTML</span>, <span style="color: #32738c">CSS</span>, <span style="color: #32738c">Javascript</span>, <span style="color: #32738c">Java (Servlets and JSPs)</span> and <span style="color: #32738c">mySQL</span>. It is still a WIP (Work in Progress). Functionality includes: Pages set up, form validation, signing up, logging in, responsive design, and adding/removing grades. To do: enhance grades page, SQL injection protection, and cookies. Test with username: \'user\' and password: \'default\'. Code can be found <a class="description-link" target="_blank" href="https://github.com/GV79/markmanagement" rel="noopener noreferrer">here.</a>',
     numImages: 1,
     imageName: 'markmanagement',
-    imageExtension: '.png',
     tags: ['java', 'jsp', 'servlet', 'html', 'css', 'mysql', 'sql'],
   },
   'JAVA STORE': {
@@ -223,7 +212,6 @@ export const PROJECTS_DATA = {
       '<span style="font-weight: bold">Java Store:</span> <a class="description-link" target="_blank" rel="noopener noreferrer" href="https://github.com/GV79/JavaStore" aria-label="Java Electronic Store">Java program</a> which allows users to store books/electronics, search the store using filters, and supports saving to/loading from text files. The program uses object-oriented concepts (polymorphism, encapsulation, abstraction, and inheritance), data structures like HashMaps and ArrayLists, Swing for the GUI, and has defensive programming/exception handling.',
     numImages: 4,
     imageName: 'store',
-    imageExtension: '.png',
     tags: ['java'],
   },
   ICALENDAR: {
@@ -231,7 +219,6 @@ export const PROJECTS_DATA = {
       '<span style="font-weight: bold">iCalendar:</span> (<a class="description-link" target="_blank" rel="noopener noreferrer" href="https://tools.ietf.org/html/rfc5545">.ics files</a>) parser and information extractor. The frontend was created using <span style="color: #32738c">Python 3 (TkInter)</span>, logic/core functionality was implemented with <span style="color: #32738c">C</span>, and <span style="color: #32738c">Python</span> was used to communicate with the <span style="color: #32738c">mySQL</span> database. This program was setup and created all in the Linux terminal. Code can be found <a class="description-link" target="_blank" rel="noopener noreferrer" href="https://github.com/GV79/calendarPlus-SQL">here.</a>',
     numImages: 3,
     imageName: 'calendar',
-    imageExtension: '.jpg',
     tags: ['c', 'python', 'sql', 'mysql'],
   },
   'FRENCH CONJUGATOR': {
@@ -240,7 +227,6 @@ export const PROJECTS_DATA = {
       'An <strong>Android</strong> app I created for fun to help users with their french conjugation skills. It was created using <strong>Java</strong> in Android Studio.',
     numImages: 3,
     imageName: 'french',
-    imageExtension: '.png',
     tags: ['java', 'android'],
   },
 };

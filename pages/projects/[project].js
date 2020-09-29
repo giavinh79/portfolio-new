@@ -38,7 +38,7 @@ export default function ProjectPage() {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
-        {project && <link rel='preload' href={`/images/${project}1.PNG`} as='image' /> && (
+        {project && <link rel='preload' href={`/images/${project}1`} as='image' /> && (
           <meta name='description' content={`Project page for ${project}`} />
         )}
       </Head>
