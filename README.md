@@ -17,3 +17,14 @@ Open [http://localhost:3000](http://localhost:3000) in the browser to see the pa
 ## Resources
 
 Technology Icons: https://devicons.github.io/devicon/
+
+## To Do
+1. Add old chat, socsreynolds, and form builder projects
+2. Defer loading of resume as it is initially offscreen on first load
+3. Optimize size of codeconnect1.PNG as it is currently 282 kB
+4. Consider adding framer motion for animations/transitions
+5. Upgrade to Nextjs v10 and incorporate image optimizations
+https://nextjs.org/blog/next-10
+6. Disabled buttons on featured projects page for mobile navs
+7. Maybe page per project to make it faster rather than do it dynamically (can then use link tags effectively)
+8. Dates

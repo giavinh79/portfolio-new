@@ -25,7 +25,7 @@ export default function SocialMedia() {
         <i className={`${styles.icon} fa fa-github`}></i>
         <p>GITHUB</p>
       </a>
-      <a href='mailto:glam01@uoguelph.ca' aria-label='Email' className={styles.iconWrapper}>
+      <a href='mailto:giavinhlam@gmail.com' aria-label='Email' className={styles.iconWrapper}>
         <i className={`${styles.icon} fa fa-envelope`}></i>
         <p>EMAIL</p>
       </a>
