@@ -19,10 +19,6 @@ export default function Home() {
 
     head.appendChild(fontLink);
     head.appendChild(iconLink);
-
-    return () => {
-      head.removeChild(link);
-    };
   }, [])
 
   return (
