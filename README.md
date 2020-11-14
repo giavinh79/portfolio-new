@@ -20,11 +20,10 @@ Technology Icons: https://devicons.github.io/devicon/
 
 ## To Do
 1. Add old chat, socsreynolds, and form builder projects
-2. Defer loading of resume as it is initially offscreen on first load
-3. Optimize size of codeconnect1.PNG as it is currently 282 kB
-4. Consider adding framer motion for animations/transitions
-5. Upgrade to Nextjs v10 and incorporate image optimizations
+2. For accessibility, change some lighter greys to #767676
+3. Consider adding framer motion for animations/transitions
+4. Incorporate nextjs v.10 image optimizations
 https://nextjs.org/blog/next-10
-6. Disabled buttons on featured projects page for mobile navs
-7. Maybe page per project to make it faster rather than do it dynamically (can then use link tags effectively)
-8. Dates
+5. Disabled buttons on featured projects page for mobile navs
+6. Maybe page per project to make it faster rather than do it dynamically (can then use link tags effectively)
+7. Dates
