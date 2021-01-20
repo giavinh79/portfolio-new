@@ -19,11 +19,16 @@ Open [http://localhost:3000](http://localhost:3000) in the browser to see the pa
 Technology Icons: https://devicons.github.io/devicon/
 
 ## To Do
+
 1. Add old chat, socsreynolds, and form builder projects
 2. For accessibility, change some lighter greys to #767676
 3. Consider adding framer motion for animations/transitions
 4. Incorporate nextjs v.10 image optimizations
-https://nextjs.org/blog/next-10
+   https://nextjs.org/blog/next-10
 5. Disabled buttons on featured projects page for mobile navs
-6. Maybe page per project to make it faster rather than do it dynamically (can then use link tags effectively)
+6. Use getStaticProps for initializing project pages
 7. Dates
+8. For fixing accessibility, change header tags on projects on homepage to p tags
+9. Maybe add storybook or add alias importing?
+10. Convert to typescript
+11. Fix some image sizes for projects so they are all aligned
