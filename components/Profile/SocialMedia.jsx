@@ -1,8 +1,6 @@
-/* LinkedIn, GitHub, Mail ... */
-
 import styles from './socialMedia.module.css';
 
-export default function SocialMedia() {
+export const SocialMedia = () => {
   return (
     <div className={styles.container}>
       <a
@@ -31,4 +29,4 @@ export default function SocialMedia() {
       </a>
     </div>
   );
-}
+};

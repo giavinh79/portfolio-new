@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Introduction from '../components/Profile/Introduction';
-import Content from '../components/Navigation/Content';
+import { Introduction } from '../components/Profile/';
+import { Content } from '../components/Navigation/';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 
     head.appendChild(fontLink);
     head.appendChild(iconLink);
-  }, [])
+  }, []);
 
   return (
     <div>
@@ -30,11 +30,6 @@ export default function Home() {
         <meta name='keywords' content='Giavinh, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
         <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
-        {/* <link href='https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900' rel='stylesheet' />
-        <link
-          rel='stylesheet'
-          href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
-        /> */}
         <link rel='prefetch' href='/docs/giavinhlam-1.png' />
       </Head>
 

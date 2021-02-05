@@ -1,8 +1,8 @@
 import { BADGE_ICONS } from '../../constants';
-import Badge from './Badge';
+import { Badge } from './Badge';
 import styles from './badges.module.css';
 
-function Badges({ tags }) {
+const BadgesComponent = ({ tags }) => {
   return (
     <div className={styles['badge-wrapper']}>
       {tags.map((technology, index) => {
@@ -18,6 +18,6 @@ function Badges({ tags }) {
       })}
     </div>
   );
-}
+};
 
-export default React.memo(Badges);
+export const Badges = React.memo(BadgesComponent);

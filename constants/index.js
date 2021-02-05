@@ -170,6 +170,16 @@ export const PROJECTS_DATA = {
     imageName: 'banana',
     tags: ['react', 'javascript', 'python'],
   },
+  'PROJECT FALCON': {
+    title: 'Project Falcon',
+    description:
+      'This was a weekend project I created as a take home assignment which is a very bare-bones form builder similar to Google Forms. It was created with <strong>React.js</strong>, <strong>Redux Toolkit</strong>, <strong>Node.js (Express)</strong>, <strong>PostgreSQL</strong> (w/ ElephantSQL hosting), and <strong>Object.js</strong> + Knex as an ORM & query building solution. It features creation and sharing of forms on a public dashboard. The frontend is hosted with Netlify and the backend is/was hosted with Heroku.',
+    github: 'https://github.com/GV79/Project-Falcon',
+    demo: 'https://infallible-blackwell-0b463a.netlify.app/edit?id=c19993d6-6884-40a8-8e5d-7143bd9b8429',
+    numImages: 6,
+    imageName: 'projectfalcon',
+    tags: ['react', 'redux', 'javascript', 'postgresql', 'node.js', 'object.js'],
+  },
   PASSPORT: {
     title: 'Passport',
     description:

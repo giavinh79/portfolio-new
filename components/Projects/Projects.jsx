@@ -3,16 +3,14 @@ import Card from './Card';
 import Masonry from 'react-masonry-css';
 import styles from './projects.module.css';
 
-const breakpointColumnsObj = {
-  default: 3,
-  2400: 2,
-  1700: 1,
-};
-
-export default function Projects() {
+export const Projects = () => {
   return (
     <Masonry
-      breakpointCols={breakpointColumnsObj}
+      breakpointCols={{
+        default: 3,
+        2400: 2,
+        1700: 1,
+      }}
       className={styles['masonry-grid']}
       columnClassName={styles['masonry-grid_column']}
     >
@@ -58,4 +56,4 @@ export default function Projects() {
       />
     </Masonry>
   );
-}
+};

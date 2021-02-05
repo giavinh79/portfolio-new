@@ -1,48 +1,43 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { PROJECTS_DATA } from '../../constants';
-import Badges from './Badges';
+import { Badges } from './Badges';
 import styles from './project.module.css';
 
-export default function Project({ project }) {
+export const Project = ({ project }) => {
+  const { tags, title, description, github, demo, numImages, imageName } = project;
+
   const router = useRouter();
-  const key = project.toUpperCase();
-
-  /* Project Data */
-  const { tags, title, description, github, demo, numImages, imageName } = PROJECTS_DATA[key];
-
-  /* Counter for current image displayed */
-  const [index, setIndex] = useState(1);
+  const [carouselIndex, setCarouselIndex] = useState(1);
 
   useEffect(() => {
     router.prefetch('/');
   }, []);
 
   const handleNextPicture = () => {
-    if (index === numImages) {
-      setIndex(1);
+    if (carouselIndex === numImages) {
+      setCarouselIndex(1);
     } else {
-      setIndex(index + 1);
+      setCarouselIndex(carouselIndex + 1);
     }
   };
 
   const handlePreviousPicture = () => {
-    if (index === 1) {
-      setIndex(numImages);
+    if (carouselIndex === 1) {
+      setCarouselIndex(numImages);
     } else {
-      setIndex(index - 1);
+      setCarouselIndex(carouselIndex - 1);
     }
   };
 
-  const handleDotChange = (index) => {
-    setIndex(index);
+  const handleDotChange = (carouselIndex) => {
+    setCarouselIndex(carouselIndex);
   };
 
   const renderDots = () => {
     const dots = [];
 
     for (let i = 1; i < numImages + 1; i++) {
-      if (i === index) {
+      if (i === carouselIndex) {
         dots.push(
           <span
             key={i}
@@ -52,7 +47,7 @@ export default function Project({ project }) {
           ></span>
         );
       } else {
-        dots.push(<span key={i} index={i} className={styles.dot} onClick={() => handleDotChange(i)}></span>);
+        dots.push(<span key={i} carouselIndex={i} className={styles.dot} onClick={() => handleDotChange(i)}></span>);
       }
     }
     return dots;
@@ -102,7 +97,11 @@ export default function Project({ project }) {
           >
             ❮
           </span>
-          <img src={`/images/${imageName}${index}.PNG`} className={styles.image} alt={`${project}${index}`} />
+          <img
+            src={`/images/${imageName}${carouselIndex}.PNG`}
+            className={styles.image}
+            alt={`${project}${carouselIndex}`}
+          />
           <span
             className={styles['navigation-arrow']}
             onClick={handleNextPicture}
@@ -119,4 +118,4 @@ export default function Project({ project }) {
       </div>
     </div>
   );
-}
+};

@@ -1,4 +1,4 @@
-This is a new portfolio website I am creating using [Next.js](https://nextjs.org/) to improve on the initial design, create a faster and more maintainable React.js app, and became more familiar with this tool (React.js framework with performance benefits and SSR for better SEO than CRA). My older portfolio website (hosted [here](https://eloquent-bhaskara-4b11e4.netlify.app/)) was originally made using HTML, CSS, and native JavaScript.
+This is a new portfolio website I am creating using [Next.js](https://nextjs.org/) to improve on the initial design, create a faster and more maintainable React.js app, and became more familiar with this tool (React.js framework which uses SSR & SSG for better performance and SEO). My older portfolio website (hosted [here](https://eloquent-bhaskara-4b11e4.netlify.app/)) was originally made using HTML, CSS, and native JavaScript.
 
 This website is deployed on Vercel here: [https://giavinhlam.me](https://giavinhlam.me)
 
@@ -26,9 +26,8 @@ Technology Icons: https://devicons.github.io/devicon/
 4. Incorporate nextjs v.10 image optimizations
    https://nextjs.org/blog/next-10
 5. Disabled buttons on featured projects page for mobile navs
-6. Use getStaticProps for initializing project pages
-7. Dates
-8. For fixing accessibility, change header tags on projects on homepage to p tags
-9. Maybe add storybook or add alias importing?
-10. Convert to typescript
-11. Fix some image sizes for projects so they are all aligned
+6. Dates
+7. Storybook?
+8. Convert to typescript
+9. Fix some image sizes for projects so they are all aligned
+10. Convert all icons into SVGs

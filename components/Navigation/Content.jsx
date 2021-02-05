@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import Skills from '../Skills/Skills';
-import Projects from '../Projects/Projects';
+import { Skills } from '../Skills';
+import { Projects } from 'components/Projects';
 import styles from './content.module.css';
 
 const CONTENT = {
-  SKILLS: 'skills',
-  PROJECTS: 'projects',
+  SKILLS: 'SKILLS',
+  PROJECTS: 'PROJECTS',
 };
 
-export default function Content() {
+export const Content = () => {
   const [contentType, setContentType] = useState(CONTENT.PROJECTS);
 
   return (
@@ -18,16 +18,16 @@ export default function Content() {
           className={`${styles.option} ${contentType === CONTENT.SKILLS && styles.selected}`}
           onClick={() => setContentType(CONTENT.SKILLS)}
         >
-          SKILLS
+          {CONTENT.SKILLS}
         </p>
         <p
           className={`${styles.option} ${contentType === CONTENT.PROJECTS ? styles.selected : null}`}
           onClick={() => setContentType(CONTENT.PROJECTS)}
         >
-          PROJECTS
+          {CONTENT.PROJECTS}
         </p>
       </div>
       {contentType === CONTENT.SKILLS ? <Skills /> : <Projects />}
     </div>
   );
-}
+};

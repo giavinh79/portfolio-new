@@ -1,7 +1,7 @@
-import SocialMedia from './SocialMedia';
+import { SocialMedia } from './SocialMedia';
 import styles from './introduction.module.css';
 
-export default function Introduction() {
+export const Introduction = () => {
   return (
     <div className={styles.container}>
       <p className={styles.school}>UNIVERSITY OF GUELPH</p>
@@ -15,4 +15,4 @@ export default function Introduction() {
       </div>
     </div>
   );
-}
+};

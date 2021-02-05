@@ -1,16 +1,34 @@
-/*
- * Page for clicked projects
- */
-
 import Head from 'next/head';
-import Project from '../../components/Project/Project';
-import { useRouter } from 'next/router';
+import { PROJECTS_DATA } from 'constants/';
+import { Project } from 'components/Project';
 import { useEffect } from 'react';
 
-export default function ProjectPage() {
-  const router = useRouter();
-  const { project } = router.query;
+export async function getStaticPaths() {
+  const projects = Object.entries(PROJECTS_DATA);
 
+  const paths = projects.map((project) => ({
+    params: {
+      project: project[0].toLowerCase(),
+    },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const projects = Object.entries(PROJECTS_DATA);
+
+  return {
+    props: {
+      project: projects.find((project) => project[0].toLowerCase() === params.project)[1],
+    },
+  };
+}
+
+export default function ProjectPage({ project }) {
   useEffect(() => {
     let head = document.head;
     let link = document.createElement('link');
@@ -27,9 +45,9 @@ export default function ProjectPage() {
   }, []);
 
   return (
-    <div>
+    <>
       <Head>
-        <title>Giavinh Lam</title>
+        <title>{`Giavinh Lam - ${project.title}`}</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
@@ -38,9 +56,8 @@ export default function ProjectPage() {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
-        {project && <link rel='preload' href={`/images/${project}1`} as='image' /> && (
-          <meta name='description' content={`Project page for ${project}`} />
-        )}
+        <link rel='preload' href={`/images/${project.imageName}1`} as='image' />
+        <meta name='description' content={project.description} />
       </Head>
 
       <main>{project && <Project project={project} />}</main>
@@ -58,6 +75,6 @@ export default function ProjectPage() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </>
   );
 }

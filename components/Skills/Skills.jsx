@@ -3,7 +3,7 @@ import styles from './skills.module.css';
 
 const ContactForm = lazy(() => import('./ContactForm'));
 
-export default function Skills() {
+export const Skills = () => {
   return (
     <div className={styles.grid}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -15,19 +15,9 @@ export default function Skills() {
           </a>
         </div>
       </div>
-      {/* <div style={{ display: 'flex', maxWidth: '52rem', marginTop: '2rem', width: '100%' }}>
-          <a href='https://reactjs.org/' className={styles.card} target='_blank' rel='noopener noreferrer'>
-            <h3>React.js &rarr;</h3>
-            <p>JavaScript Library</p>
-          </a>
-
-          <a href='https://nodejs.org/en/' className={styles.card} target='_blank' rel='noopener noreferrer'>
-            <h3>Node.js &rarr;</h3>
-            <p>JavaScript Runtime Ensvironment</p>
-          </a> */}
       <Suspense fallback={<></>}>
         <ContactForm />
       </Suspense>
     </div>
   );
-}
+};
