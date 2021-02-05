@@ -93,7 +93,7 @@ export const Project = ({ project }) => {
             ❮
           </span>
           <img
-            src={`/images/${imageName}${carouselIndex}.png`}
+            src={`/images/projects/${imageName}${carouselIndex}.png`}
             className={styles.image}
             alt={`${project}${carouselIndex}`}
           />

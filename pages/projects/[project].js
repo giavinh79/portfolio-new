@@ -62,7 +62,7 @@ export default function ProjectPage({ project }) {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
-        <link rel='preload' href={`/images/${project.imageName}1.png`} as='image' />
+        <link rel='preload' href={`/images/projects/${project.imageName}1.png`} as='image' />
         <meta name='description' content={project.description} />
       </Head>
 
