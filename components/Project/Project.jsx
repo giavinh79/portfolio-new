@@ -10,6 +10,21 @@ export const Project = ({ project }) => {
   const [carouselIndex, setCarouselIndex] = useState(1);
 
   useEffect(() => {
+    const { head } = document;
+    const deviconLink = document.createElement('link');
+    const iconLink = document.createElement('link');
+
+    deviconLink.type = 'text/css';
+    deviconLink.rel = 'stylesheet';
+    iconLink.type = 'text/css';
+    iconLink.rel = 'stylesheet';
+
+    deviconLink.href = 'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css';
+    iconLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+
+    head.appendChild(deviconLink);
+    head.appendChild(iconLink);
+
     router.prefetch('/');
   }, []);
 
