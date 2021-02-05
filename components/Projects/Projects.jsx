@@ -1,5 +1,5 @@
 import { PROJECTS_DATA } from '../../constants';
-import Card from './Card';
+import { Card } from './Card';
 import Masonry from 'react-masonry-css';
 import styles from './projects.module.css';
 

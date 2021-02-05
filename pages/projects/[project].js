@@ -1,12 +1,18 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { PROJECTS_DATA } from 'constants/';
 import { Project } from 'components/Project';
-import { useEffect } from 'react';
+
+const isValidProject = (project) => {
+  const validProperties = ['title', 'description', 'numImages', 'imageName', 'tags'];
+  return validProperties.every((property) => property in project);
+};
 
 export async function getStaticPaths() {
   const projects = Object.entries(PROJECTS_DATA);
+  const filteredProjects = projects.filter((project) => isValidProject(project[1]));
 
-  const paths = projects.map((project) => ({
+  const paths = filteredProjects.map((project) => ({
     params: {
       project: project[0].toLowerCase(),
     },
@@ -56,11 +62,11 @@ export default function ProjectPage({ project }) {
           rel='stylesheet'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
         />
-        <link rel='preload' href={`/images/${project.imageName}1`} as='image' />
+        <link rel='preload' href={`/images/${project.imageName}1.png`} as='image' />
         <meta name='description' content={project.description} />
       </Head>
 
-      <main>{project && <Project project={project} />}</main>
+      <main>{<Project project={project} />}</main>
 
       <style jsx global>{`
         html,

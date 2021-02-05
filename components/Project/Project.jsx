@@ -39,15 +39,10 @@ export const Project = ({ project }) => {
     for (let i = 1; i < numImages + 1; i++) {
       if (i === carouselIndex) {
         dots.push(
-          <span
-            key={i}
-            index={i}
-            className={`${styles.dot} ${styles.active}`}
-            onClick={() => handleDotChange(i)}
-          ></span>
+          <span key={i} className={`${styles.dot} ${styles.active}`} onClick={() => handleDotChange(i)}></span>
         );
       } else {
-        dots.push(<span key={i} carouselIndex={i} className={styles.dot} onClick={() => handleDotChange(i)}></span>);
+        dots.push(<span key={i} className={styles.dot} onClick={() => handleDotChange(i)}></span>);
       }
     }
     return dots;
@@ -98,7 +93,7 @@ export const Project = ({ project }) => {
             ❮
           </span>
           <img
-            src={`/images/${imageName}${carouselIndex}.PNG`}
+            src={`/images/${imageName}${carouselIndex}.png`}
             className={styles.image}
             alt={`${project}${carouselIndex}`}
           />
