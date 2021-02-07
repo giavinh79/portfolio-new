@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './card.module.css';
 import Image from 'next/image';
 
-export const Card = ({ description, image, imageWidth = 576, imageHeight = 279, title }) => {
+export const Card = ({ description, image, imageWidth = 1903, imageHeight = 937, priority = false, title }) => {
   const urlTitle = title.toLowerCase();
 
   return (
@@ -15,6 +15,7 @@ export const Card = ({ description, image, imageWidth = 576, imageHeight = 279, 
             width={imageWidth}
             height={imageHeight}
             layout='responsive'
+            priority={priority}
             className={styles.rounded}
           />
         </Link>

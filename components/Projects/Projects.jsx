@@ -20,16 +20,19 @@ export const Projects = () => {
         image={`${IMAGE_URL}/plop1.png`}
         title={PROJECTS_DATA['PLOP'].title}
         description={PROJECTS_DATA['PLOP'].description}
+        priority
       />
       <Card
         image={`${IMAGE_URL}/codeconnect1.png`}
         title={PROJECTS_DATA['CODECONNECT'].title}
         description={PROJECTS_DATA['CODECONNECT'].description}
+        priority
       />
       <Card
         image={`${IMAGE_URL}/gymtrack1.png`}
         title={PROJECTS_DATA['GYMTRACK'].title}
         description={PROJECTS_DATA['GYMTRACK'].description}
+        priority
       />
       <Card
         image={`${IMAGE_URL}/reactbodyhighlighter1.png`}
@@ -37,6 +40,7 @@ export const Projects = () => {
         imageHeight={424}
         title={PROJECTS_DATA['REACT BODY HIGHLIGHTER'].title}
         description={PROJECTS_DATA['REACT BODY HIGHLIGHTER'].description}
+        priority
       />
       <Card
         image={`${IMAGE_URL}/banana1.png`}

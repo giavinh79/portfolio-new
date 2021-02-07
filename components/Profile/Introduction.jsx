@@ -1,5 +1,6 @@
 import { SocialMedia } from './SocialMedia';
 import styles from './introduction.module.css';
+import Image from 'next/image';
 
 export const Introduction = () => {
   return (
@@ -10,7 +11,14 @@ export const Introduction = () => {
       </h1>
       <h2 className={styles.subtitle}>Computer Engineering (CENG:C)</h2>
       <div className={styles['portfolio-wrapper']}>
-        <img src='/images/abstract/portfoliosvg.svg' alt='portfolio abstract art' />
+        <Image
+          src='/images/abstract/portfoliosvg.svg'
+          layout='intrinsic'
+          width={560}
+          height={566.78}
+          alt='portfolio abstract art'
+          priority
+        />
         <SocialMedia />
       </div>
     </div>
