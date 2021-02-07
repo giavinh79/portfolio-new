@@ -1,14 +1,24 @@
 import Link from 'next/link';
 import styles from './card.module.css';
+import Image from 'next/image';
 
-export const Card = ({ description, image, title }) => {
+export const Card = ({ description, image, imageWidth = 576, imageHeight = 279, title }) => {
   const urlTitle = title.toLowerCase();
 
   return (
     <div className={styles.card}>
-      <Link href={`/projects/${urlTitle}`}>
-        <img src={image} className={styles.image} alt={`Thumbnail for ${title}`} />
-      </Link>
+      <div className={styles.image}>
+        <Link href={`/projects/${urlTitle}`}>
+          <Image
+            src={image}
+            alt={`Thumbnail for ${title}`}
+            width={imageWidth}
+            height={imageHeight}
+            layout='responsive'
+            className={styles.rounded}
+          />
+        </Link>
+      </div>
       <p className={styles.title}>{title}</p>
       <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
       <Link href={`/projects/${urlTitle}`}>

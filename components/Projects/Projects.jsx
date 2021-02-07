@@ -33,6 +33,8 @@ export const Projects = () => {
       />
       <Card
         image={`${IMAGE_URL}/reactbodyhighlighter1.png`}
+        imageWidth={531}
+        imageHeight={424}
         title={PROJECTS_DATA['REACT BODY HIGHLIGHTER'].title}
         description={PROJECTS_DATA['REACT BODY HIGHLIGHTER'].description}
       />
@@ -53,6 +55,8 @@ export const Projects = () => {
       />
       <Card
         image={`${IMAGE_URL}/french1.png`}
+        imageWidth={777}
+        imageHeight={458}
         title={PROJECTS_DATA['FRENCH CONJUGATOR'].title}
         description={PROJECTS_DATA['FRENCH CONJUGATOR'].description}
       />

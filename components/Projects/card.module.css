@@ -52,6 +52,10 @@
   transform: scale(1.05);
 }
 
+.rounded {
+  border-radius: 1rem;
+}
+
 .title {
   color: #2b3137;
   font-weight: 700;

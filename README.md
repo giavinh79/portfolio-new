@@ -18,16 +18,19 @@ Open [http://localhost:3000](http://localhost:3000) in the browser to see the pa
 
 Technology Icons: https://devicons.github.io/devicon/
 
-## To Do
+## Todos
 
-1. Add old chat, socsreynolds, and form builder projects
-2. For accessibility, change some lighter greys to #767676
-3. Consider adding framer motion for animations/transitions
-4. Incorporate nextjs v.10 image optimizations
-   https://nextjs.org/blog/next-10
+1. Overhaul and convert to TypeScript
+2. Some constants could be extracted to constants/ folder (and helper functions i.e. lazy CSS loading)
+3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
+4. Convert all icons into SVGs so we don't need to call/rely on devicon link
 5. Disabled buttons on featured projects page for mobile navs
-6. Dates
-7. Storybook?
-8. Convert to typescript
-9. Fix some image sizes for projects so they are all aligned
-10. Convert all icons into SVGs
+6. Consider adding framer motion for animations/transitions
+7. Small date badges beside projects (top right of title)
+8. For accessibility, change some lighter greys to #767676
+9. Filter (fixed icon for filtering projects by technology)
+10. Storybook (for fun)
+
+## In progress
+
+1. Fix some image sizes for projects so they are all aligned
