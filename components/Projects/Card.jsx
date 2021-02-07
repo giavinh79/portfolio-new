@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './card.module.css';
 import Image from 'next/image';
 
-export const Card = ({ description, image, imageWidth = 1903, imageHeight = 937, priority = false, title }) => {
+export const Card = ({ description, image, imageWidth = 983, imageHeight = 484, priority = false, title }) => {
   const urlTitle = title.toLowerCase();
 
   return (
