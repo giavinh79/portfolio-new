@@ -7,8 +7,8 @@ export const Card = ({ description, image, imageWidth = 1903, imageHeight = 937,
 
   return (
     <div className={styles.card}>
-      <div className={styles.image}>
-        <Link href={`/projects/${urlTitle}`}>
+      <Link href={`/projects/${urlTitle}`}>
+        <div className={styles.image}>
           <Image
             src={image}
             alt={`Thumbnail for ${title}`}
@@ -18,8 +18,8 @@ export const Card = ({ description, image, imageWidth = 1903, imageHeight = 937,
             priority={priority}
             className={styles.rounded}
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
       <p className={styles.title}>{title}</p>
       <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
       <Link href={`/projects/${urlTitle}`}>
