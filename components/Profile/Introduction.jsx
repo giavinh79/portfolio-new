@@ -8,7 +8,7 @@ export const Introduction = () => {
       <h1 className={styles.title}>
         Giavinh <span style={{ color: '#0070F3' }}>Lam</span>
       </h1>
-      <h2 className={styles.subtitle}>Computer Engineering (CENG:C)</h2>
+      <h2 className={styles.subtitle}>Software Developer, B. Eng</h2>
       <div className={styles['portfolio-wrapper']}>
         <img src='/images/abstract/portfoliosvg.svg' alt='portfolio abstract art' />
         <SocialMedia />
