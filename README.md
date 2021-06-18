@@ -14,6 +14,14 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) in the browser to see the page.
 
+## Linting
+
+Add the ESLint extension and run this command to check for problems:
+
+```bash
+npx next lint
+```
+
 ## Resources
 
 Technology Icons: https://devicons.github.io/devicon/

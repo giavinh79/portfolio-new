@@ -11,37 +11,33 @@ export const Project = ({ project }) => {
 
   useEffect(() => {
     const { head } = document;
-    const deviconLink = document.createElement('link');
-    const iconLink = document.createElement('link');
 
-    deviconLink.type = 'text/css';
-    deviconLink.rel = 'stylesheet';
-    iconLink.type = 'text/css';
-    iconLink.rel = 'stylesheet';
+    const cssToLazyLoad = [
+      'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+    ];
 
-    deviconLink.href = 'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css';
-    iconLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-
-    head.appendChild(deviconLink);
-    head.appendChild(iconLink);
+    cssToLazyLoad.forEach((css) => {
+      const link = document.createElement('link');
+      link.type = 'text/css';
+      link.rel = 'stylesheet';
+      link.href = css;
+      head.appendChild(link);
+    });
 
     router.prefetch('/');
-  }, []);
+  }, [router]);
 
   const handleNextPicture = () => {
-    if (carouselIndex === numImages) {
-      setCarouselIndex(1);
-    } else {
-      setCarouselIndex(carouselIndex + 1);
-    }
+    const index = carouselIndex === numImages ? 1 : carouselIndex + 1;
+
+    setCarouselIndex(index);
   };
 
   const handlePreviousPicture = () => {
-    if (carouselIndex === 1) {
-      setCarouselIndex(numImages);
-    } else {
-      setCarouselIndex(carouselIndex - 1);
-    }
+    const index = carouselIndex === 1 ? numImages : carouselIndex - 1;
+
+    setCarouselIndex(index);
   };
 
   const handleDotChange = (carouselIndex) => {
@@ -52,13 +48,9 @@ export const Project = ({ project }) => {
     const dots = [];
 
     for (let i = 1; i < numImages + 1; i++) {
-      if (i === carouselIndex) {
-        dots.push(
-          <span key={i} className={`${styles.dot} ${styles.active}`} onClick={() => handleDotChange(i)}></span>
-        );
-      } else {
-        dots.push(<span key={i} className={styles.dot} onClick={() => handleDotChange(i)}></span>);
-      }
+      const classNames = i === carouselIndex ? `${styles.dot} ${styles.active}` : styles.dot;
+
+      dots.push(<span key={i} className={classNames} onClick={() => handleDotChange(i)}></span>);
     }
     return dots;
   };
@@ -100,30 +92,26 @@ export const Project = ({ project }) => {
           </button>
         </div>
         <div className={styles.carousel}>
-          <span
-            className={styles['navigation-arrow']}
-            onClick={handlePreviousPicture}
-            style={{ display: numImages > 1 ? 'block' : 'none' }}
-          >
-            ❮
-          </span>
+          {numImages > 1 && (
+            <span className={styles['navigation-arrow']} onClick={handlePreviousPicture}>
+              ❮
+            </span>
+          )}
           <img
             src={`/images/projects/${imageName}${carouselIndex}.png`}
             className={styles.image}
             alt={`${project}${carouselIndex}`}
           />
-          <span
-            className={styles['navigation-arrow']}
-            onClick={handleNextPicture}
-            style={{ display: numImages > 1 ? 'block' : 'none' }}
-          >
-            ❯
-          </span>
+          {numImages > 1 && (
+            <span className={styles['navigation-arrow']} onClick={handleNextPicture}>
+              ❯
+            </span>
+          )}
         </div>
         <div className={styles['dot-wrapper']}>{renderDots()}</div>
         <Badges tags={tags} />
 
-        <p className={styles.title}>{title.toUpperCase()}</p>
+        <p className={styles.title}>{title}</p>
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
       </div>
     </div>

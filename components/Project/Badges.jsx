@@ -1,3 +1,4 @@
+import React from 'react';
 import { BADGE_ICONS } from '../../constants';
 import { Badge } from './Badge';
 import styles from './badges.module.css';

@@ -7,7 +7,7 @@ export const Card = ({ description, image, imageWidth = 983, imageHeight = 484, 
 
   return (
     <div className={styles.card}>
-      <Link href={`/projects/${urlTitle}`}>
+      <Link passHref href={`/projects/${urlTitle}`}>
         <div className={styles.image}>
           <Image
             src={image}
@@ -22,7 +22,7 @@ export const Card = ({ description, image, imageWidth = 983, imageHeight = 484, 
       </Link>
       <p className={styles.title}>{title}</p>
       <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
-      <Link href={`/projects/${urlTitle}`}>
+      <Link passHref href={`/projects/${urlTitle}`}>
         <button tabIndex='0' className={styles.button}>
           VIEW DETAILS &rarr;
         </button>

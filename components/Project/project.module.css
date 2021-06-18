@@ -16,10 +16,6 @@
   max-width: 80rem;
 }
 
-/* .card:hover {
-      background: linear-gradient(180deg, #5989e5, #37cfdc);
-    } */
-
 .title {
   font-family: Montserrat;
   font-size: 1.2rem;
@@ -27,6 +23,7 @@
   margin: 0;
   font-weight: 600;
   margin-top: 2rem;
+  text-transform: uppercase;
 }
 
 .description {
