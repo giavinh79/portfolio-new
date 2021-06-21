@@ -1,32 +1,36 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useCallback, useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Badges } from './Badges';
+import { range } from 'lodash';
 import styles from './project.module.css';
+
+const cssToLazyLoad = [
+  'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+];
+
+function lazyLoadCss() {
+  const { head } = document;
+
+  cssToLazyLoad.forEach((css) => {
+    const link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = css;
+    head.appendChild(link);
+  });
+}
 
 export const Project = ({ project }) => {
   const { tags, title, description, github, demo, numImages, imageName } = project;
 
-  const router = useRouter();
   const [carouselIndex, setCarouselIndex] = useState(1);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const { head } = document;
-
-    const cssToLazyLoad = [
-      'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css',
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-    ];
-
-    cssToLazyLoad.forEach((css) => {
-      const link = document.createElement('link');
-      link.type = 'text/css';
-      link.rel = 'stylesheet';
-      link.href = css;
-      head.appendChild(link);
-    });
-
-    router.prefetch('/');
-  }, [router]);
+    lazyLoadCss();
+    setIsMounted(true);
+  }, []);
 
   const handleNextPicture = () => {
     const index = carouselIndex === numImages ? 1 : carouselIndex + 1;
@@ -54,6 +58,21 @@ export const Project = ({ project }) => {
     }
     return dots;
   };
+
+  const loadRemainingImages = useCallback(() => {
+    if (numImages === 1) return;
+
+    const startingIndex = 2; // first image already loaded on mount
+    const imageIndexes = range(startingIndex, numImages + 1);
+
+    return (
+      <div style={{ display: 'none' }}>
+        {imageIndexes.map((index) => (
+          <img src={`/images/projects/${imageName}${index}.png`} alt={`placeholder for loading ${index}`} key={index} />
+        ))}
+      </div>
+    );
+  }, [imageName, numImages]);
 
   return (
     <div className={styles.container}>
@@ -87,9 +106,9 @@ export const Project = ({ project }) => {
               </a>
             </div>
           </div>
-          <button className={styles['button']} onClick={() => router.push('/')}>
-            &larr; GO BACK
-          </button>
+          <Link passHref href={'/'}>
+            <button className={styles['button']}>&larr; GO BACK</button>
+          </Link>
         </div>
         <div className={styles.carousel}>
           {numImages > 1 && (
@@ -109,10 +128,13 @@ export const Project = ({ project }) => {
           )}
         </div>
         <div className={styles['dot-wrapper']}>{renderDots()}</div>
+
         <Badges tags={tags} />
 
         <p className={styles.title}>{title}</p>
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
+
+        {isMounted && loadRemainingImages()}
       </div>
     </div>
   );
