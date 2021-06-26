@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
+import Script from 'next/script';
 import Link from 'next/link';
 import { Badges } from './Badges';
 import { range } from 'lodash';
@@ -135,6 +136,18 @@ export const Project = ({ project }) => {
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
 
         {isMounted && loadRemainingImages()}
+
+        <Script
+          src='https://www.googletagmanager.com/gtag/js?id=UA-177902424-1'
+          onLoad={() => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-177902424-1');
+          }}
+        />
       </div>
     </div>
   );
