@@ -38,6 +38,7 @@ Technology Icons: https://devicons.github.io/devicon/
 8. For accessibility, change some lighter greys to #767676
 9. Filter (fixed icon for filtering projects by technology)
 10. Storybook (for fun)
+11. Integrate CMS to easily add new projects (maybe Strapi/Netlify CMS)
 
 ## In progress
 
