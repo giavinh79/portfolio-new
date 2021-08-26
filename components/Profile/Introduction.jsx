@@ -1,5 +1,5 @@
-import Script from 'next/script';
 import Image from 'next/image';
+
 import { SocialMedia } from './SocialMedia';
 import portfolio from '../../public/images/abstract/portfoliosvg.svg';
 import styles from './introduction.module.css';
@@ -18,17 +18,6 @@ export const Introduction = () => {
           <SocialMedia />
         </div>
       </div>
-      <Script
-        src='https://www.googletagmanager.com/gtag/js?id=UA-177902424-1'
-        onLoad={() => {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'UA-177902424-1');
-        }}
-      />
     </>
   );
 };

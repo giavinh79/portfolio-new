@@ -99,6 +99,11 @@ export const BADGE_ICONS = {
   },
 };
 
+export const cssToLazyLoad = [
+  'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+];
+
 /* Import new project data here and update Projects.jsx accordingly */
 export const PROJECTS_DATA = {
   PLOP: {

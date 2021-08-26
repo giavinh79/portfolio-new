@@ -1,14 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import Script from 'next/script';
 import Link from 'next/link';
-import { Badges } from './Badges';
-import { range } from 'lodash';
-import styles from './project.module.css';
 
-const cssToLazyLoad = [
-  'https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-];
+import { cssToLazyLoad } from 'constants';
+import { Badges } from './Badges';
+import styles from './project.module.css';
 
 function lazyLoadCss() {
   const { head } = document;
@@ -64,7 +59,7 @@ export const Project = ({ project }) => {
     if (numImages === 1) return;
 
     const startingIndex = 2; // first image already loaded on mount
-    const imageIndexes = range(startingIndex, numImages + 1);
+    const imageIndexes = Array.from({ length: numImages - 1 }, (_, i) => startingIndex + i);
 
     return (
       <div style={{ display: 'none' }}>
@@ -136,18 +131,6 @@ export const Project = ({ project }) => {
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
 
         {isMounted && loadRemainingImages()}
-
-        <Script
-          src='https://www.googletagmanager.com/gtag/js?id=UA-177902424-1'
-          onLoad={() => {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-177902424-1');
-          }}
-        />
       </div>
     </div>
   );

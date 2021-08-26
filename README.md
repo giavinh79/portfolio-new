@@ -28,6 +28,8 @@ Technology Icons: https://devicons.github.io/devicon/
 
 ## Todos
 
+https://l.facebook.com/l.php?u=https%3A%2F%2Fblog.jarrodwatts.com%2Ftrack-user-behaviour-on-your-website-with-google-analytics-and-nextjs%3Ffbclid%3DIwAR2W6rg1v4QtQqUE_GNoBlasG3TmQn7Q3jgqaZo_Y4kT_lEE3zXmfbbJSiI&h=AT3DxVayMKwSWvPZpERCy66Yq0s0NwMRO4SjKa9mDNFRYmGiFuYdPyL7h_SkIzK6AS0Kchf7LBewFfnF8m-4eBl7DAQwlRWPLKevObk78_daCbRTYhADY0a8j1mf3amSZDNyjaP8zxSQBy_M6jY
+
 1. Overhaul and convert to TypeScript
 2. Some constants could be extracted to constants/ folder (and helper functions i.e. lazy CSS loading)
 3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
