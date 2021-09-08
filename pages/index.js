@@ -1,24 +1,13 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
+
+import { lazyLoadCss } from 'helpers';
 import { Introduction } from '../components/Profile/';
 import { Content } from '../components/Navigation/';
-import { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    const { head } = document;
-    const fontLink = document.createElement('link');
-    const iconLink = document.createElement('link');
-
-    fontLink.type = 'text/css';
-    fontLink.rel = 'stylesheet';
-    iconLink.type = 'text/css';
-    iconLink.rel = 'stylesheet';
-
-    fontLink.href = 'https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900';
-    iconLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-
-    head.appendChild(fontLink);
-    head.appendChild(iconLink);
+    lazyLoadCss(['https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900'])
   }, []);
 
   return (

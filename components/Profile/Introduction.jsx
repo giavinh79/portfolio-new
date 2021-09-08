@@ -12,7 +12,11 @@ export const Introduction = () => {
         <h1 className={styles.title}>
           Giavinh <span style={{ color: '#0070F3' }}>Lam</span>
         </h1>
-        <h2 className={styles.subtitle}>Software Developer, B. Eng</h2>
+        <h2 className={styles.subtitle}>
+          <span>Software Developer</span>
+          <span> &bull; </span>
+          <span>B. Eng</span>
+        </h2>
         <div className={styles['portfolio-wrapper']}>
           <Image src={portfolio} alt='portfolio abstract art' />
           <SocialMedia />

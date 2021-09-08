@@ -11,7 +11,7 @@ export const SocialMedia = () => {
         className={styles.iconWrapper}
       >
         <i className={`${styles.icon} fa fa-linkedin-square`}></i>
-        <p className={styles.iconText}>LINKEDIN</p>
+        <p>LINKEDIN</p>
       </a>
       <a
         target='_blank'
@@ -21,11 +21,11 @@ export const SocialMedia = () => {
         className={styles.iconWrapper}
       >
         <i className={`${styles.icon} fa fa-github`}></i>
-        <p className={styles.iconText}>GITHUB</p>
+        <p>GITHUB</p>
       </a>
       <a href='mailto:giavinhlam@gmail.com' aria-label='Email' className={styles.iconWrapper}>
         <i className={`${styles.icon} fa fa-envelope`}></i>
-        <p className={styles.iconText}>EMAIL</p>
+        <p>EMAIL</p>
       </a>
     </div>
   );

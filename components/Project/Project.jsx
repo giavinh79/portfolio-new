@@ -1,21 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import { cssToLazyLoad } from 'constants';
+import { projectCssToLazyLoad } from 'constants';
+import { lazyLoadCss } from 'helpers';
 import { Badges } from './Badges';
 import styles from './project.module.css';
-
-function lazyLoadCss() {
-  const { head } = document;
-
-  cssToLazyLoad.forEach((css) => {
-    const link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = css;
-    head.appendChild(link);
-  });
-}
 
 export const Project = ({ project }) => {
   const { tags, title, description, github, demo, numImages, imageName } = project;
@@ -24,7 +13,7 @@ export const Project = ({ project }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    lazyLoadCss();
+    lazyLoadCss(projectCssToLazyLoad);
     setIsMounted(true);
   }, []);
 
@@ -115,7 +104,7 @@ export const Project = ({ project }) => {
           <img
             src={`/images/projects/${imageName}${carouselIndex}.png`}
             className={styles.image}
-            alt={`${project}${carouselIndex}`}
+            alt={`${project.title} Sample Image ${carouselIndex}`}
           />
           {numImages > 1 && (
             <span className={styles['navigation-arrow']} onClick={handleNextPicture}>
