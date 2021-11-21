@@ -14,14 +14,10 @@ function MyApp({ Component, pageProps }) {
           gtag('config', 'UA-177902424-1');
         }}
       />
-      <Script
-        src='https://kit.fontawesome.com/23287ecd37.js'
-        crossOrigin='anonymous'
-      />
+      <Script src='https://kit.fontawesome.com/23287ecd37.js' crossOrigin='anonymous' />
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
-export default MyApp
-
+export default MyApp;
