@@ -7,7 +7,7 @@ export const Skills = () => {
   return (
     <div className={styles.grid}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <img className={styles.resume} src='/docs/giavinhlam-1.png' alt='Resume' />
+        <img className={styles.resume} src='/docs/giavinhlam-2.png' alt='Resume' />
         <div className={styles['resume-wrapper']}>
           <a className={styles['resume-download']} href='/docs/giavinhlam.pdf' download='giavinhlam.pdf'>
             <p className={styles['resume-download-text']}>Download</p>

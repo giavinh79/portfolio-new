@@ -2,7 +2,9 @@ import Link from 'next/link';
 import styles from './card.module.css';
 import Image from 'next/image';
 
-export const Card = ({ description, image, imageWidth = 983, imageHeight = 484, priority = false, title }) => {
+export const Card = ({
+  data: { description, image, imageWidth = 983, imageHeight = 484, priority = false, tabIndex, title },
+}) => {
   const urlTitle = title.toLowerCase();
 
   return (
@@ -23,7 +25,7 @@ export const Card = ({ description, image, imageWidth = 983, imageHeight = 484, 
       <p className={styles.title}>{title}</p>
       <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
       <Link passHref href={`/projects/${urlTitle}`}>
-        <button tabIndex='0' className={styles.button}>
+        <button tabIndex={tabIndex || 0} className={styles.button}>
           VIEW DETAILS &rarr;
         </button>
       </Link>
