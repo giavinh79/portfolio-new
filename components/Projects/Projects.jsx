@@ -66,7 +66,7 @@ export const Projects = () => {
 
   return mounted ? (
     <div style={{ padding: '2rem' }}>
-      <Masonry items={items} columnGutter={60} rowGutter={60} columnWidth={400} render={Card}></Masonry>
+      <Masonry items={items} columnGutter={60} rowGutter={60} columnWidth={400} render={Card} role={null}></Masonry>
     </div>
   ) : null;
 };
