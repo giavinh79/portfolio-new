@@ -7,7 +7,7 @@ import { Content } from '../components/Navigation/';
 
 export default function Home() {
   useEffect(() => {
-    lazyLoadCss(['https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900'])
+    lazyLoadCss(['https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900']);
   }, []);
 
   return (
@@ -15,7 +15,10 @@ export default function Home() {
       <Head>
         <title>Giavinh Lam</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='description' content="Giavinh Lam's Portfolio Website" />
+        <meta
+          name='description'
+          content="Giavinh Lam is a software developer working with languages like JavaScript (React.js) and Java. He graduated with a Bachelor's in Computer Engineering at the University of Guelph."
+        />
         <meta name='keywords' content='Giavinh, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
         <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
