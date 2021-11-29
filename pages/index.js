@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 
-import { lazyLoadCss } from 'helpers';
+import { lazyLoadCss } from 'helpers/';
 import { Introduction } from '../components/Profile/';
 import { Content } from '../components/Navigation/';
 
@@ -19,7 +19,7 @@ export default function Home() {
           name='description'
           content="Giavinh Lam is a software developer working with languages like JavaScript (React.js) and Java. He graduated with a Bachelor's in Computer Engineering at the University of Guelph."
         />
-        <meta name='keywords' content='Giavinh, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
+        <meta name='keywords' content='Giavinh, GV79, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
         <meta name='author' content='Giavinh Lam' />
         <link rel='icon' href='/favicon.ico' />
         <link rel='prefetch' href='/docs/giavinhlam-1.png' />
