@@ -1,5 +1,8 @@
 import { lazy, Suspense } from 'react';
+import Image from 'next/image';
+
 import styles from './skills.module.css';
+import resume from '../../public/docs/giavinhlam-2.png';
 
 const ContactForm = lazy(() => import('./ContactForm'));
 
@@ -7,7 +10,9 @@ export const Skills = () => {
   return (
     <div className={styles.grid}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <img className={styles.resume} src='/docs/giavinhlam-2.png' alt='Resume' />
+        <div className={styles.resume}>
+          <Image alt='Resume' src={resume} layout='intrinsic' priority />
+        </div>
         <div className={styles['resume-wrapper']}>
           <a className={styles['resume-download']} href='/docs/giavinhlam.pdf' download='giavinhlam.pdf'>
             <p className={styles['resume-download-text']}>Download</p>
