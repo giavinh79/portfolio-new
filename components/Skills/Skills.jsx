@@ -11,7 +11,7 @@ export const Skills = () => {
     <div className={styles.grid}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <div className={styles.resume}>
-          <Image alt='Resume' src={resume} layout='intrinsic' priority />
+          <Image alt='Resume' src={resume} layout='intrinsic' priority placeholder='blur' />
         </div>
         <div className={styles['resume-wrapper']}>
           <a className={styles['resume-download']} href='/docs/giavinhlam.pdf' download='giavinhlam.pdf'>
