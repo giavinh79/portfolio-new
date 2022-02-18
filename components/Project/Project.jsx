@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { projectCssToLazyLoad } from 'constants';
 import { lazyLoadCss } from 'helpers';
+
 import { Badges } from './Badges';
 import styles from './project.module.css';
 

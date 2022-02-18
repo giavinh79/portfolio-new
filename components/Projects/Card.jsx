@@ -1,14 +1,14 @@
 import Link from 'next/link';
-import styles from './card.module.css';
 import Image from 'next/image';
 
-export const Card = ({
-  data: { description, image, imageWidth = 983, imageHeight = 484, priority = false, title },
-}) => {
+import styles from './card.module.css';
+
+export const Card = ({ data }) => {
+  const { description, image, imageWidth = 983, imageHeight = 484, priority = false, title } = data;
   const urlTitle = title.toLowerCase();
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} tabIndex='-1'>
       <Link passHref href={`/projects/${urlTitle}`}>
         <div className={styles.image}>
           <Image

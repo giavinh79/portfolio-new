@@ -23,7 +23,8 @@
   width: fit-content;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #115fb8;
 }
 

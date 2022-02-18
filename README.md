@@ -6,7 +6,7 @@ This website is deployed on Vercel here: [https://giavinhlam.me](https://giavinh
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server (requires Node.js version >= 17):
 
 ```bash
 npm run dev
@@ -43,3 +43,4 @@ Technology Icons: https://devicons.github.io/devicon/
 6. Consider adding framer motion for animations/transitions
 7. Small date badges beside projects (top right of title)
 8. Filter (fixed icon for filtering projects by technology)
+9. Dark Mode
