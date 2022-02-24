@@ -6,7 +6,7 @@ This website is deployed on Vercel here: [https://giavinhlam.me](https://giavinh
 
 ## Getting Started
 
-First, run the development server (requires Node.js version >= 17):
+First, run the development server (Node.js version >= 17):
 
 ```bash
 npm run dev
