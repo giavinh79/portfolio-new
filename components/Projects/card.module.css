@@ -3,7 +3,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  min-width: 30rem;
+  /* min-width: 30rem; */
   background: none;
   max-width: 80rem;
 }
