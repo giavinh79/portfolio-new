@@ -35,12 +35,11 @@ Technology Icons: https://devicons.github.io/devicon/
 
 ## Todos
 
-1. Integrate CMS to easily add new projects (i.e. Strapi, Netlify CMS...)
-2. Add old chat, socsreynolds, mrflatbeds, and form builder projects
-3. Convert all icons into SVGs so we don't need to call/rely on devicon link
-4. Disabled buttons on featured projects page for mobile navs
-5. TypeScript
+1. Dark Mode
+2. Integrate CMS to easily add new projects (i.e. Strapi, Netlify CMS...)
+3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
+4. Convert all icons into SVGs so we don't need to call/rely on devicon link
+5. Disabled buttons on featured projects page for mobile navs
 6. Consider adding framer motion for animations/transitions
 7. Small date badges beside projects (top right of title)
 8. Filter (fixed icon for filtering projects by technology)
-9. Dark Mode
