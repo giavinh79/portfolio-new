@@ -13,6 +13,7 @@ function MyApp({ Component, pageProps }) {
           gtag('js', new Date());
           gtag('config', 'UA-177902424-1');
         }}
+        strategy='lazyOnload'
       />
       <Script src='https://kit.fontawesome.com/23287ecd37.js' crossOrigin='anonymous' />
       <Component {...pageProps} />
