@@ -7,7 +7,7 @@ import styles from './introduction.module.css';
 export const Introduction = () => {
   return (
     <>
-      <div className={styles.container}>
+      <header className={styles.container}>
         <p className={styles.school}>UNIVERSITY OF GUELPH</p>
         <h1 className={styles.title}>
           Giavinh <span style={{ color: '#0070F3' }}>Lam</span>
@@ -21,7 +21,7 @@ export const Introduction = () => {
           <Image src={portfolio} alt='portfolio abstract art' />
           <SocialMedia />
         </div>
-      </div>
+      </header>
     </>
   );
 };

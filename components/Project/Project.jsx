@@ -117,7 +117,7 @@ export const Project = ({ project }) => {
 
         <Badges tags={tags} />
 
-        <p className={styles.title}>{title}</p>
+        <h1 className={styles.title}>{title}</h1>
         <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
 
         {isMounted && loadRemainingImages()}

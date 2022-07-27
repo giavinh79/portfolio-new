@@ -2,7 +2,7 @@ import styles from './socialMedia.module.css';
 
 export const SocialMedia = () => {
   return (
-    <div className={styles.container}>
+    <footer className={styles.container}>
       <a
         target='_blank'
         rel='noopener noreferrer'
@@ -27,6 +27,6 @@ export const SocialMedia = () => {
         <i className={`${styles.icon} fa fa-envelope`}></i>
         <p>EMAIL</p>
       </a>
-    </div>
+    </footer>
   );
 };
