@@ -1,6 +1,13 @@
+import { useEffect } from 'react';
 import Script from 'next/script';
 
+import { lazyLoadCss } from 'helpers/';
+
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    lazyLoadCss(['https://fonts.googleapis.com/css?family=Montserrat:400,700']);
+  }, []);
+
   return (
     <>
       <Script

@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 import { PROJECTS_DATA } from 'constants/';
 import { Project } from 'components/Project';
 
@@ -35,28 +34,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ProjectPage({ project }) {
-  useEffect(() => {
-    let head = document.head;
-    let link = document.createElement('link');
-
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.href = 'https://fonts.googleapis.com/css?family=Montserrat';
-
-    head.appendChild(link);
-
-    return () => {
-      head.removeChild(link);
-    };
-  }, []);
-
   return (
     <>
       <Head>
         <title>{`Giavinh Lam - ${project.title}`}</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='author' content='Giavinh Lam' />
-        <link rel='icon' href='/favicon.ico' />
         <link rel='preload' href={`/images/projects/${project.imageName}1.png`} as='image' />
         <meta name='description' content={project.description} />
       </Head>
