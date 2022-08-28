@@ -45,7 +45,6 @@ export default function Home() {
         <meta name='twitter:image' content='https://giavinhlam.com/images/abstract/portfolio.png' />
 
         <link rel='icon' href='/favicon.ico' />
-        <link rel='prefetch' href='/docs/giavinhlam-1.png' />
       </Head>
 
       <main>
