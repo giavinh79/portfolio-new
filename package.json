@@ -11,15 +11,15 @@
     "cypress:headless": "cypress run"
   },
   "dependencies": {
-    "masonic": "^3.6.5",
-    "next": "^12.2.3",
+    "masonic": "^3.7.0",
+    "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.3",
     "cypress": "^9.7.0",
-    "eslint": "^8.20.0",
-    "eslint-config-next": "^12.2.3"
+    "eslint": "^8.25.0",
+    "eslint-config-next": "^12.3.1"
   }
 }
