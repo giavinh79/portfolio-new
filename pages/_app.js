@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Script from 'next/script';
+import Head from 'next/head';
 
 import { lazyLoadCss } from 'helpers/';
 
@@ -10,6 +11,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
       <Script
         src='https://www.googletagmanager.com/gtag/js?id=UA-177902424-1'
         onLoad={() => {
