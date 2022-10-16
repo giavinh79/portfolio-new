@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import { Introduction } from 'components/Profile/';
-import { Content } from 'components/Navigation/';
+import { Tabs } from 'components/Navigation/';
 
 export default function Home() {
   return (
@@ -14,10 +14,8 @@ export default function Home() {
         />
       </Head>
 
-      <main>
-        <Introduction />
-        <Content />
-      </main>
+      <Introduction />
+      <Tabs />
 
       <style jsx global>{`
         html,

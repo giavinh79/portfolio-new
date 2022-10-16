@@ -6,6 +6,7 @@
 }
 
 .option {
+  background-color: transparent;
   font-family: Montserrat;
   font-size: 1.2rem;
   color: #767676;
@@ -39,17 +40,23 @@
   color: #0070f3 !important;
 }
 
-.option:hover {
+.option:hover,
+.option:focus {
   border: 1px solid #888;
   border-bottom-width: 2px;
   border-right: none;
   border-left: none;
   border-top: none;
   color: #888;
+  outline: none;
+}
+
+.option:focus-visible {
+  background-color: #f3f3f3;
+  outline: none;
 }
 
 /* Mobile View */
-
 @media only screen and (max-width: 1150px) {
   .container {
     margin-left: 0;

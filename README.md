@@ -31,16 +31,17 @@ Technology Icons: https://devicons.github.io/devicon/
 ## In progress
 
 1. Fix some image sizes for projects so they are all aligned
-2. Fix tabs/keyboard accessibility
 
 ## Todos
 
-1. Dark Mode
+1. Light/Dark Mode toggle + defaults via `prefers-color-scheme` setting
 2. Integrate CMS to easily add new projects (i.e. Strapi, Netlify CMS...)
 3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
 4. Convert all icons into SVGs so we don't need to call/rely on devicon link
 5. Disabled buttons on featured projects page for mobile navs
 6. Get rid of font-awesome (bundle size too large) and just download & import SVGs for icons
-7. Small date badges beside projects (top right of title)
+7. Internationalization
 8. Filter (fixed icon for filtering projects by technology)
 9. Simple animation https://github.com/formkit/auto-animate
+10. Small date badges beside projects (top right of title)
+11. Accessibility of Masonry library I'm using

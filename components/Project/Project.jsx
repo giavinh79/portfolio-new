@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import { projectCssToLazyLoad } from 'constants';
+import { CSS_TO_LAZY_LOAD } from 'constants';
 import { lazyLoadCss } from 'helpers';
 
 import { Badges } from './Badges';
@@ -14,7 +14,7 @@ export const Project = ({ project }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    lazyLoadCss(projectCssToLazyLoad);
+    lazyLoadCss(CSS_TO_LAZY_LOAD);
     setIsMounted(true);
   }, []);
 
@@ -117,9 +117,10 @@ export const Project = ({ project }) => {
 
         <Badges tags={tags} />
 
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
-
+        <main>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>
+        </main>
         {isMounted && loadRemainingImages()}
       </div>
     </div>

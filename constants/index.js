@@ -1,5 +1,4 @@
 /* Map for badges (technologies to icons/images) */
-
 export const BADGE_ICONS = {
   adonisjs: {
     devicon: false,
@@ -99,7 +98,7 @@ export const BADGE_ICONS = {
   },
 };
 
-export const projectCssToLazyLoad = ['https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'];
+export const CSS_TO_LAZY_LOAD = ['https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css'];
 
 /* Import new project data here and update Projects.jsx accordingly */
 export const PROJECTS_DATA = {
