@@ -6,7 +6,7 @@ describe('Project page', () => {
   });
 
   it('can use contact form properly', () => {
-    cy.get('p').contains('SKILLS').click();
+    cy.get('button').contains('SKILLS').click();
     cy.contains('form', /contact me/i).should('have.attr', 'action', 'https://formspree.io/meqrvnjk');
 
     cy.contains('button', /send message/i).should('be.disabled');

@@ -16,7 +16,7 @@ describe('Landing page', () => {
   });
 
   it('should have skills tab which displays resume and contact form', () => {
-    cy.contains('p', 'SKILLS').click();
+    cy.contains('button', 'SKILLS').click();
 
     cy.get('img[alt="Thumbnail for Plop"]').should('not.exist');
 
