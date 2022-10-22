@@ -45,3 +45,4 @@ Technology Icons: https://devicons.github.io/devicon/
 9. Simple animation https://github.com/formkit/auto-animate
 10. Small date badges beside projects (top right of title)
 11. Accessibility of Masonry library I'm using
+12. For fun? SVG eyes that follow cursor
