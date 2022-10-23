@@ -35,7 +35,7 @@ Technology Icons: https://devicons.github.io/devicon/
 ## Todos
 
 1. Light/Dark Mode toggle + defaults via `prefers-color-scheme` setting
-2. Integrate CMS to easily add new projects (i.e. Strapi, Netlify CMS...)
+2. Integrate CMS to easily add new projects (i.e. Prismic, DatoCMS...)
 3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
 4. Convert all icons into SVGs so we don't need to call/rely on devicon link
 5. Disabled buttons on featured projects page for mobile navs
