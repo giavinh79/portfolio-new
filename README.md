@@ -46,3 +46,4 @@ Technology Icons: https://devicons.github.io/devicon/
 10. Small date badges beside projects (top right of title)
 11. Accessibility of Masonry library I'm using
 12. For fun? SVG eyes that follow cursor
+13. 13. Progressive web app integration? https://github.com/shadowwalker/next-pwa
