@@ -8,7 +8,7 @@ describe('Landing page', () => {
     cy.contains(/Open-source project management web application for teams/i);
     cy.get('img[alt="Thumbnail for Plop"]');
 
-    cy.get('button[href*="/projects/plop"]')
+    cy.get('a[href*="/projects/plop"]')
       .contains(/view details/i)
       .click({ force: true });
 
