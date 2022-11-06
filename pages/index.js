@@ -5,7 +5,7 @@ import { Tabs } from 'components/Navigation/';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Giavinh Lam</title>
         <meta
@@ -16,20 +16,6 @@ export default function Home() {
 
       <Introduction />
       <Tabs />
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
-            Droid Sans, Helvetica Neue, sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+    </>
   );
 }

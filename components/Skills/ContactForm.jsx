@@ -13,7 +13,7 @@ export default function ContactForm() {
           <label htmlFor='name' className={styles.text}>
             Name
           </label>
-          <input id='name' type='text' className={styles.input} name='name'></input>
+          <input id='name' type='text' className={styles.input} name='name' required />
         </div>
         <div className={styles['input-wrapper']}>
           <label htmlFor='email' className={styles.text}>
@@ -25,7 +25,8 @@ export default function ContactForm() {
             type='email'
             className={styles.input}
             onChange={(e) => setEmail(e.target.value)}
-          ></input>
+            required
+          />
         </div>
       </div>
       <div className={styles['input-wrapper']}>

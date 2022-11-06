@@ -30,17 +30,13 @@ export const Project = ({ project }) => {
     setCarouselIndex(index);
   };
 
-  const handleDotChange = (carouselIndex) => {
-    setCarouselIndex(carouselIndex);
-  };
-
   const renderDots = () => {
     const dots = [];
 
     for (let i = 1; i < numImages + 1; i++) {
       const classNames = i === carouselIndex ? `${styles.dot} ${styles.active}` : styles.dot;
 
-      dots.push(<span key={i} className={classNames} onClick={() => handleDotChange(i)}></span>);
+      dots.push(<span key={i} className={classNames} onClick={() => setCarouselIndex(i)}></span>);
     }
     return dots;
   };
@@ -66,34 +62,38 @@ export const Project = ({ project }) => {
         <div className={styles.back}>
           <div className={styles['link-wrapper']}>
             <div className={styles.link}>
-              <button
-                className={styles['demo-button']}
+              <a
+                href={github}
+                className={styles['linkButton']}
                 disabled={github == null}
-                onClick={() => window.open(github, '_blank') || window.location.replace(github)}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <i className='fa fa-github' aria-hidden='true'></i>
                 GITHUB
-              </button>
+              </a>
               <a href={github} target='_blank' rel='noopener noreferrer'>
                 {github ? github.substring(8, github.length) : 'Private'}
               </a>
             </div>
             <div className={styles.link}>
-              <button
-                className={styles['demo-button']}
+              <a
+                href={demo}
+                className={styles['linkButton']}
                 disabled={demo == null}
-                onClick={() => window.open(demo, '_blank') || window.location.replace(demo)}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <i className='fa fa-globe' aria-hidden='true'></i>
                 DEMO
-              </button>
+              </a>
               <a href={demo} target='_blank' rel='noopener noreferrer'>
                 {demo ? demo.substring(8, demo.length) : 'N/A'}
               </a>
             </div>
           </div>
-          <Link passHref href={'/'}>
-            <button className={styles['button']}>&larr; GO BACK</button>
+          <Link href='/' className={styles['button']}>
+            &larr; GO BACK
           </Link>
         </div>
         <div className={styles.carousel}>
