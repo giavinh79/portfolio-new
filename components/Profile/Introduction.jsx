@@ -20,7 +20,7 @@ export const Introduction = () => {
         </h2>
       </header>
       <div className={styles['portfolio-wrapper']}>
-        <Image src={portfolio} alt='portfolio abstract art' />
+        <Image src={portfolio} priority alt='portfolio abstract art' />
         <SocialMedia />
       </div>
     </div>

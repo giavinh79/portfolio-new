@@ -1,14 +1,12 @@
-import { useEffect } from 'react';
 import Script from 'next/script';
 import Head from 'next/head';
+import { Montserrat } from '@next/font/google';
 
-import { lazyLoadCss } from 'helpers/';
+const montserrat = Montserrat({
+  subsets: ['latin'],
+});
 
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    lazyLoadCss(['https://fonts.googleapis.com/css?family=Montserrat:400,700']);
-  }, []);
-
   return (
     <>
       <Head>
@@ -28,6 +26,18 @@ function MyApp({ Component, pageProps }) {
       />
       <Script src='https://kit.fontawesome.com/23287ecd37.js' crossOrigin='anonymous' />
       <Component {...pageProps} />
+      <style jsx global>{`
+        html,
+        body {
+          padding: 0;
+          margin: 0;
+          font-family: ${montserrat.style.fontFamily};
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
     </>
   );
 }

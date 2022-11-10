@@ -7,9 +7,9 @@ describe('Project page', () => {
     cy.contains('Plop');
     cy.contains(/Open-source project management web application for teams/i);
     cy.contains('p', /adonisjs/i);
-    cy.contains('button', /github/i);
-    cy.contains('button', /demo/i);
-    cy.contains('button', /go back/i);
+    cy.contains('a', /github/i);
+    cy.contains('a', /demo/i);
+    cy.contains('a', /go back/i);
   });
 
   it('can interact with image carousel properly', () => {

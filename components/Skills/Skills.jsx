@@ -10,9 +10,7 @@ export const Skills = () => {
   return (
     <div className={styles.grid}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <div className={styles.resume}>
-          <Image alt='Resume' src={resume} layout='intrinsic' priority placeholder='blur' />
-        </div>
+        <Image alt='Resume' src={resume} priority placeholder='blur' className={styles.resume} />
         <div className={styles['resume-wrapper']}>
           <a className={styles['resume-download']} href='/docs/giavinhlam.pdf' download='giavinhlam.pdf'>
             <p className={styles['resume-download-text']}>Download</p>

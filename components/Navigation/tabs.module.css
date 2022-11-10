@@ -1,13 +1,12 @@
 .container {
+  height: inherit;
   margin-left: 35rem;
   padding: 2rem;
-  flex: 1;
   background-color: #f8f8f8;
 }
 
 .option {
   background-color: transparent;
-  font-family: Montserrat;
   font-size: 1.2rem;
   color: #767676;
   margin: 0;
@@ -25,9 +24,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
