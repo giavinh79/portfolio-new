@@ -20,13 +20,11 @@ export const Project = ({ project }) => {
 
   const handleNextPicture = () => {
     const index = carouselIndex === numImages ? 1 : carouselIndex + 1;
-
     setCarouselIndex(index);
   };
 
   const handlePreviousPicture = () => {
     const index = carouselIndex === 1 ? numImages : carouselIndex - 1;
-
     setCarouselIndex(index);
   };
 
@@ -64,7 +62,7 @@ export const Project = ({ project }) => {
             <div className={styles.link}>
               <a
                 href={github}
-                className={styles['linkButton']}
+                className={styles['link-button']}
                 disabled={github == null}
                 target='_blank'
                 rel='noopener noreferrer'
@@ -79,7 +77,7 @@ export const Project = ({ project }) => {
             <div className={styles.link}>
               <a
                 href={demo}
-                className={styles['linkButton']}
+                className={styles['link-button']}
                 disabled={demo == null}
                 target='_blank'
                 rel='noopener noreferrer'
