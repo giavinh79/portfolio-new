@@ -1,5 +1,5 @@
 .container {
-  height: inherit;
+  min-height: 100vh;
   margin-left: 35rem;
   padding: 2rem;
   background-color: #f8f8f8;

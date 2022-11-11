@@ -11,14 +11,14 @@ export const Skills = () => {
     <div className={styles.grid}>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <Image alt='Resume' src={resume} priority placeholder='blur' className={styles.resume} />
-        <div className={styles['resume-wrapper']}>
+        <div className={styles['resume-download-wrapper']}>
           <a className={styles['resume-download']} href='/docs/giavinhlam.pdf' download='giavinhlam.pdf'>
             <p className={styles['resume-download-text']}>Download</p>
             <i className='fa fa-download' aria-hidden='true' style={{ color: '#666' }}></i>
           </a>
         </div>
       </div>
-      <Suspense fallback={<></>}>
+      <Suspense fallback={<>Loading Contact Form...</>}>
         <ContactForm />
       </Suspense>
     </div>

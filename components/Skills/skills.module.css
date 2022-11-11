@@ -19,18 +19,18 @@
   border-radius: 1em;
 }
 
-.resume-wrapper {
+.resume-download {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.resume-download-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
   margin-top: 1rem;
-}
-
-.resume-download {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
 }
 
 .resume-download-text {
