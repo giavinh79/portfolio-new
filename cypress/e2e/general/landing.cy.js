@@ -1,6 +1,6 @@
 describe('Landing page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('/');
   });
 
   it('displays project and can navigate to the project page', () => {
@@ -10,9 +10,9 @@ describe('Landing page', () => {
 
     cy.get('a[href*="/projects/plop"]')
       .contains(/view details/i)
-      .click({ force: true });
+      .click();
 
-    cy.url().should('eq', 'http://localhost:3000/projects/plop');
+    cy.url().should('match', /.*\/projects\/plop/);
   });
 
   it('should have skills tab which displays resume and contact form', () => {

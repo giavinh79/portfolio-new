@@ -1,6 +1,6 @@
 describe('Project page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/projects/plop');
+    cy.visit('/projects/plop');
   });
 
   it('displays proper information', () => {
@@ -15,7 +15,7 @@ describe('Project page', () => {
   it('can interact with image carousel properly', () => {
     cy.get('img[alt="Plop Sample Image 1"]').should('exist');
 
-    cy.get('#__next > main > div > div > div:nth-child(3) > span:nth-child(2)').click(); // click second dot
+    cy.get('[data-cy="carousel-dot-2"]').click(); // click second dot
     cy.get('img[alt="Plop Sample Image 1"]').should('not.exist');
     cy.get('img[alt="Plop Sample Image 2"]').should('exist');
 
