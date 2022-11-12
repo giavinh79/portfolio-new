@@ -34,7 +34,9 @@ export const Project = ({ project }) => {
     for (let i = 1; i < numImages + 1; i++) {
       const classNames = i === carouselIndex ? `${styles.dot} ${styles.active}` : styles.dot;
 
-      dots.push(<span key={i} className={classNames} onClick={() => setCarouselIndex(i)}></span>);
+      dots.push(
+        <span key={i} data-cy={`carousel-dot-${i}`} className={classNames} onClick={() => setCarouselIndex(i)}></span>
+      );
     }
     return dots;
   };

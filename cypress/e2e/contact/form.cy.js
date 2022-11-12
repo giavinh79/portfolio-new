@@ -2,7 +2,7 @@ import message from '../../fixtures/example-message.json';
 
 describe('Project page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit('/');
   });
 
   it('can use contact form properly', () => {
