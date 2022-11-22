@@ -23,6 +23,8 @@ describe('Landing page', () => {
     cy.get('img[alt="Resume"]');
     cy.contains('p', 'Download');
 
-    cy.get('form').contains(/Contact Me/i);
+    cy.get('form').contains(/Contact Me/i, {
+      timeout: 10000, // increase timeout to 10 seconds since this form gets lazy loaded
+    });
   });
 });
