@@ -8,7 +8,7 @@
 .option {
   background-color: transparent;
   font-size: 1.2rem;
-  color: #767676;
+  color: #717171;
   margin: 0;
   padding: 0 1rem;
   cursor: pointer;
@@ -33,7 +33,7 @@
   border-right: none !important;
   border-left: none !important;
   border-top: none !important;
-  color: #0070f3 !important;
+  color: #006be9 !important;
 }
 
 .option:hover,
