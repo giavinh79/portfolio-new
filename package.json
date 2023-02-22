@@ -11,15 +11,15 @@
     "cypress:headless": "cypress run"
   },
   "dependencies": {
-    "@next/font": "^13.0.7",
+    "@next/font": "^13.1.6",
     "masonic": "3.7.0",
-    "next": "^13.0.7",
+    "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "cypress": "^11.1.0",
-    "eslint": "^8.29.0",
-    "eslint-config-next": "^13.0.7"
+    "cypress": "^12.6.0",
+    "eslint": "^8.34.0",
+    "eslint-config-next": "^13.1.6"
   }
 }

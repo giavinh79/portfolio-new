@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import Image from 'next/image';
 
 import styles from './skills.module.css';
-import resume from '../../public/docs/giavinhlam-3.png';
+import resume from '../../public/docs/giavinhlam-4.png';
 
 const ContactForm = lazy(() => import('./ContactForm'));
 

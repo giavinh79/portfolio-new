@@ -1,4 +1,4 @@
-[![CI](https://github.com/GV79/portfolio-new/actions/workflows/main.yml/badge.svg)](https://github.com/GV79/portfolio-new/actions/workflows/main.yml)
+[![CI](https://github.com/giavinh79/portfolio-new/actions/workflows/main.yml/badge.svg)](https://github.com/giavinh79/portfolio-new/actions/workflows/main.yml)
 
 This is a new portfolio website I am creating using [Next.js](https://nextjs.org/) to improve on the initial design, create a faster and more maintainable React.js app, and became more familiar with this tool (React.js framework which uses SSR & SSG for better performance and SEO). My older portfolio website (hosted [here](https://eloquent-bhaskara-4b11e4.netlify.app/)) was originally made using HTML, CSS, and JavaScript.
 

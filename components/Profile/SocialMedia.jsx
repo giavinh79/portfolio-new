@@ -16,7 +16,7 @@ export const SocialMedia = () => {
       <a
         target='_blank'
         rel='noopener noreferrer'
-        href='https://github.com/GV79/portfolio-new'
+        href='https://github.com/giavinh79/portfolio-new'
         aria-label='GitHub'
         className={styles.iconWrapper}
       >

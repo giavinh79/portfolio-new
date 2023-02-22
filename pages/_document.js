@@ -11,10 +11,13 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <meta name='keywords' content='Giavinh, GV79, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph' />
+          <meta
+            name='keywords'
+            content='Giavinh, giavinh79, giavinh79, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph'
+          />
           <meta name='author' content='Giavinh Lam' />
 
-          {/* Facebook Meta Tags */}
+          {/* Facebook OG Tags */}
           <meta property='og:url' content='https://giavinhlam.com/' key='ogurl' />
           <meta property='og:type' content='website' />
           <meta property='og:title' content='Giavinh Lam' key='ogtitle' />
@@ -25,7 +28,7 @@ class MyDocument extends Document {
           />
           <meta property='og:image' content='https://giavinhlam.com/images/abstract/portfolio.png' key='ogimage' />
 
-          {/* Twitter Meta Tags */}
+          {/* Twitter OG Tags */}
           <meta name='twitter:card' content='summary_large_image' />
           <meta property='twitter:domain' content='https://giavinhlam.com' />
           <meta property='twitter:url' content='https://giavinhlam.com' />
