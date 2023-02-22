@@ -13,7 +13,7 @@ class MyDocument extends Document {
         <Head>
           <meta
             name='keywords'
-            content='Giavinh, giavinh79, giavinh79, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph'
+            content='Giavinh, giavinh79, Giavinh Lam, Gia Vinh Lam, Gia Vinh, University of Guelph'
           />
           <meta name='author' content='Giavinh Lam' />
 
