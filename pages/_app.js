@@ -1,10 +1,9 @@
 import Script from 'next/script';
 import Head from 'next/head';
-import { Montserrat } from '@next/font/google';
+import { Montserrat } from 'next/font/google';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  display: 'swap',
 });
 
 function MyApp({ Component, pageProps }) {
