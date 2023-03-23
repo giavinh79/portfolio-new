@@ -66,9 +66,7 @@ export const Projects = () => {
           gap: [60, 60, 60, 60, 60, 60],
           media: [1000, 1024, 1560, 2000, 3000, 4000],
         }}
-        render={(item, idx) => {
-          return <Card key={idx} {...item} />;
-        }}
+        render={(item, idx) => <Card key={idx} {...item} />}
       />
     </main>
   );
