@@ -69,7 +69,6 @@ export const Projects = () => {
         render={(item, idx) => {
           return <Card key={idx} {...item} />;
         }}
-        role='list'
       />
     </main>
   );
