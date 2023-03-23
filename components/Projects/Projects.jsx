@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Masonry } from 'masonic';
+import { Masonry } from 'react-plock';
 
 import { PROJECTS_DATA } from 'constants/';
 import { Card } from 'components/Projects/Card';
@@ -58,27 +57,20 @@ const PROJECTS = [
 ];
 
 export const Projects = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // https://github.com/jaredLunde/masonic/issues/123
-    // https://github.com/vercel/next.js/discussions/35773#discussioncomment-3441844
-    setMounted(true);
-  }, []);
-
   return (
     <main style={{ padding: '2rem' }}>
-      {mounted && (
-        <Masonry
-          items={PROJECTS}
-          columnGutter={60}
-          rowGutter={60}
-          columnWidth={400}
-          render={Card}
-          tabIndex='-1'
-          role='list'
-        />
-      )}
+      <Masonry
+        items={PROJECTS}
+        config={{
+          columns: [1, 2, 1, 2, 3, 4],
+          gap: [60, 60, 60, 60, 60, 60],
+          media: [1000, 1024, 1560, 2000, 3000, 4000],
+        }}
+        render={(item, idx) => {
+          return <Card key={idx} {...item} />;
+        }}
+        role='list'
+      />
     </main>
   );
 };

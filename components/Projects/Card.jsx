@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 import styles from './card.module.css';
 
-export const Card = ({ data }) => {
-  const { description, image, imageWidth = 983, imageHeight = 484, priority = false, title } = data;
+export const Card = (props) => {
+  const { description, image, imageWidth = 983, imageHeight = 484, title } = props;
   const urlTitle = title.toLowerCase();
 
   return (
@@ -15,7 +15,6 @@ export const Card = ({ data }) => {
           alt={`Thumbnail for ${title}`}
           width={imageWidth}
           height={imageHeight}
-          priority={priority}
           className={styles.image}
         />
       </Link>
