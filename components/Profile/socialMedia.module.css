@@ -10,7 +10,7 @@
 }
 
 .icon {
-  font-size: 2.5rem;
+  height: 2.5rem;
   margin: 0 0.125rem 1rem 0.125rem;
 }
 
@@ -20,6 +20,7 @@
   align-items: center;
   font-weight: 600;
   color: #767676;
+  fill: #767676;
   text-decoration: none;
   padding: 1rem 0 0 2.5rem;
 }
@@ -29,6 +30,7 @@
 .iconWrapper:focus-visible {
   outline: none;
   color: #4d4d4d;
+  fill: #4d4d4d;
 }
 
 /* Mobile Styles */

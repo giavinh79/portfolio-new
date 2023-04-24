@@ -25,6 +25,11 @@
   text-decoration: none;
 }
 
+.resume-download svg {
+  width: 1rem;
+  fill: #666;
+}
+
 .resume-download-wrapper {
   display: flex;
   justify-content: flex-end;

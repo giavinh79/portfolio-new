@@ -40,7 +40,7 @@ class MyDocument extends Document {
           <meta name='twitter:image' content='https://giavinhlam.com/images/abstract/portfolio.png' />
 
           {/* Links */}
-          <link rel='icon' href='/favicon.ico' />
+          <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
         </Head>
         <body>
           <Main />

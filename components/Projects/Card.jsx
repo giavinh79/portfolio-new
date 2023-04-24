@@ -4,13 +4,14 @@ import Image from 'next/image';
 import styles from './card.module.css';
 
 export const Card = (props) => {
-  const { description, image, imageWidth = 983, imageHeight = 484, title } = props;
+  const { description, image, imageWidth = 983, imageHeight = 484, priority, title } = props;
   const urlTitle = title.toLowerCase();
 
   return (
     <div className={styles.card} tabIndex='-1'>
       <Link href={`/projects/${urlTitle}`}>
         <Image
+          priority={priority}
           src={image}
           alt={`Thumbnail for ${title}`}
           width={imageWidth}

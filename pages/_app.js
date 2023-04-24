@@ -24,7 +24,6 @@ function MyApp({ Component, pageProps }) {
         }}
         strategy='lazyOnload'
       />
-      <Script src='https://kit.fontawesome.com/23287ecd37.js' crossOrigin='anonymous' />
       <Component {...pageProps} />
       <style jsx global>{`
         html,

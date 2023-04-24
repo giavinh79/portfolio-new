@@ -134,6 +134,7 @@
   background-color: #4077b8;
   border: none;
   color: white;
+  fill: white;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
   height: 40px;
   padding: 0 15px;
@@ -144,12 +145,17 @@
   font-weight: 700;
 }
 
-.link-button:disabled,
-.link-button[disabled] {
+.link-button:hover {
+  background-color: #2e5787;
+}
+
+.link-button[disabled],
+.link-button[disabled]:hover {
   cursor: not-allowed;
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+  fill: #666666;
 }
 
 .link {
@@ -169,8 +175,8 @@
   gap: 1rem;
 }
 
-.link i {
-  font-size: 1.3rem;
+.link svg {
+  width: 1.3rem;
   margin-left: 0.3rem;
   margin-right: 0.4rem;
 }
