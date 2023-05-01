@@ -1,4 +1,4 @@
-import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head';
 import { Montserrat } from 'next/font/google';
 
@@ -12,19 +12,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <Script
-        src='https://www.googletagmanager.com/gtag/js?id=UA-177902424-1'
-        onLoad={() => {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'UA-177902424-1');
-        }}
-        strategy='lazyOnload'
-      />
       <Component {...pageProps} />
+      <Analytics />
       <style jsx global>{`
         html,
         body {
