@@ -39,11 +39,8 @@ Technology Icons: https://devicons.github.io/devicon/
 3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
 4. Convert all icons into SVGs so we don't need to call/rely on devicon link
 5. Disabled buttons on featured projects page for mobile navs
-6. Get rid of font-awesome (bundle size too large) and just download & import SVGs for icons
-7. Internationalization
-8. Filter (fixed icon for filtering projects by technology)
-9. Simple animation https://github.com/formkit/auto-animate
-10. Small date badges beside projects (top right of title)
-11. Accessibility of Masonry library I'm using
-12. For fun? SVG eyes that follow cursor
-13. Progressive web app integration? https://github.com/shadowwalker/next-pwa
+6. Internationalization
+7. Filter (fixed icon for filtering projects by technology)
+8. Simple animation https://github.com/formkit/auto-animate
+9. Small date badges beside projects (top right of title)
+10. For fun? SVG eyes that follow cursor
