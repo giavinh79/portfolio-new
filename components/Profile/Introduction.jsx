@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { SocialMedia } from './SocialMedia';
 import styles from './introduction.module.css';
 
-import portfolio from '../../public/images/abstract/portfoliosvg.svg';
+import portfolio from '../../public/images/abstract/portfolio.svg';
 
 export const Introduction = () => {
   return (

@@ -11,12 +11,22 @@
 /* Resume Picture and Download Styles */
 
 .resume {
-  height: auto;
-  width: 100%;
-  max-width: 50rem;
-  margin-top: 12px;
+  margin: 0 auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1em;
+}
+
+.resume-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 160/207;
+  margin: 12px 0 4px 0;
+  max-width: 50rem;
+  max-height: calc(50rem * 207 / 160);
 }
 
 .resume-download {
@@ -34,8 +44,10 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  max-width: 50rem;
+  width: 100%;
+  margin: 12px 0px 4px;
   cursor: pointer;
-  margin-top: 1rem;
 }
 
 .resume-download-text {
