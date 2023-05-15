@@ -96,7 +96,7 @@ export const Project = ({ project }) => {
               </a>
             </div>
           </div>
-          <Link href='/' className={styles['button']}>
+          <Link href='/' className={styles.button}>
             &larr; GO BACK
           </Link>
         </div>

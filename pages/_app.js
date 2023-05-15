@@ -22,8 +22,14 @@ function MyApp({ Component, pageProps }) {
           font-family: ${montserrat.style.fontFamily};
         }
 
-        * {
+        *,
+        *::before,
+        *::after {
           box-sizing: border-box;
+        }
+
+        a {
+          text-decoration: none;
         }
       `}</style>
     </>
