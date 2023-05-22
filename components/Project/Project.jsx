@@ -35,7 +35,7 @@ export const Project = ({ project }) => {
       const classNames = i === carouselIndex ? `${styles.dot} ${styles.active}` : styles.dot;
 
       dots.push(
-        <span key={i} data-cy={`carousel-dot-${i}`} className={classNames} onClick={() => setCarouselIndex(i)}></span>
+        <button key={i} data-cy={`carousel-dot-${i}`} className={classNames} onClick={() => setCarouselIndex(i)} />
       );
     }
     return dots;
@@ -100,11 +100,11 @@ export const Project = ({ project }) => {
             &larr; GO BACK
           </Link>
         </div>
-        <div className={styles.carousel}>
+        <section className={styles.carousel} aria-label='Project screenshots'>
           {numImages > 1 && (
-            <span className={styles['navigation-arrow']} onClick={handlePreviousPicture}>
+            <button className={styles['navigation-arrow']} onClick={handlePreviousPicture}>
               ❮
-            </span>
+            </button>
           )}
           <img
             src={`/images/projects/${imageName}${carouselIndex}.png`}
@@ -112,11 +112,11 @@ export const Project = ({ project }) => {
             alt={`${project.title} Sample Image ${carouselIndex}`}
           />
           {numImages > 1 && (
-            <span className={styles['navigation-arrow']} onClick={handleNextPicture}>
+            <button className={styles['navigation-arrow']} onClick={handleNextPicture}>
               ❯
-            </span>
+            </button>
           )}
-        </div>
+        </section>
         <div className={styles['dot-wrapper']}>{renderDots()}</div>
 
         <Badges tags={tags} />

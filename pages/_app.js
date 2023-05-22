@@ -22,6 +22,13 @@ function MyApp({ Component, pageProps }) {
           font-family: ${montserrat.style.fontFamily};
         }
 
+        button {
+          margin: 0;
+          padding: 0;
+          border: none;
+          background-color: transparent;
+        }
+
         *,
         *::before,
         *::after {
