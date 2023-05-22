@@ -19,11 +19,11 @@ describe('Project page', () => {
     cy.get('img[alt="Plop Sample Image 1"]').should('not.exist');
     cy.get('img[alt="Plop Sample Image 2"]').should('exist');
 
-    cy.get('span').contains('❯').click(); // click left arrow
+    cy.get('button').contains('❯').click(); // click left arrow
     cy.get('img[alt="Plop Sample Image 2"]').should('not.exist');
     cy.get('img[alt="Plop Sample Image 3"]').should('exist');
 
-    cy.get('span').contains('❮').click(); // click right arrow
+    cy.get('button').contains('❮').click(); // click right arrow
     cy.get('img[alt="Plop Sample Image 2"]').should('exist');
   });
 });
