@@ -40,7 +40,7 @@ export default function ContactForm() {
           className={styles.input}
           style={{ resize: 'none' }}
           onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
+        />
       </div>
       <div className={styles.buttonWrapper}>
         <button

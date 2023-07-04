@@ -56,18 +56,16 @@ const PROJECTS = [
   },
 ];
 
+const MASONRY_CONFIG = {
+  columns: [1, 2, 1, 2, 3, 4],
+  gap: [60, 60, 60, 60, 60, 60],
+  media: [1000, 1024, 1560, 2000, 3000, 4000],
+};
+
 export const Projects = () => {
   return (
     <main style={{ padding: '2rem' }}>
-      <Masonry
-        items={PROJECTS}
-        config={{
-          columns: [1, 2, 1, 2, 3, 4],
-          gap: [60, 60, 60, 60, 60, 60],
-          media: [1000, 1024, 1560, 2000, 3000, 4000],
-        }}
-        render={(item, idx) => <Card key={idx} {...item} />}
-      />
+      <Masonry items={PROJECTS} config={MASONRY_CONFIG} render={(item, idx) => <Card key={idx} {...item} />} />
     </main>
   );
 };
