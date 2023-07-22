@@ -1,5 +1,5 @@
 import React from 'react';
-import { BADGE_ICONS } from '../../constants';
+import { TECH_TO_BADGE_MAP } from '../../constants';
 import { Badge } from './Badge';
 import styles from './badges.module.css';
 
@@ -7,7 +7,7 @@ const BadgesComponent = ({ tags }) => {
   return (
     <div className={styles['badge-wrapper']}>
       {tags.map((technology) => {
-        const graphic = BADGE_ICONS[technology];
+        const graphic = TECH_TO_BADGE_MAP[technology];
 
         if (graphic == null) return null;
 

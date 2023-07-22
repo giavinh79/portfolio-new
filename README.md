@@ -21,26 +21,18 @@ Open [http://localhost:3000](http://localhost:3000) in the browser to see the pa
 Add the ESLint extension and run this command to check for problems:
 
 ```bash
-npx next lint
+npm run lint
 ```
 
 ## Resources
 
 Technology Icons: https://devicons.github.io/devicon/
 
-## In progress
-
-1. Fix some image sizes for projects so they are all aligned
-
 ## Todos
 
-1. Light/Dark Mode toggle + defaults via `prefers-color-scheme` setting
-2. Integrate CMS to easily add new projects (i.e. Prismic, DatoCMS...)
-3. Add old chat, socsreynolds, mrflatbeds, and form builder projects
-4. Convert all icons into SVGs so we don't need to call/rely on devicon link
-5. Disabled buttons on featured projects page for mobile navs
-6. Internationalization
-7. Filter (fixed icon for filtering projects by technology)
-8. Simple animation https://github.com/formkit/auto-animate
-9. Small date badges beside projects (top right of title)
-10. For fun? SVG eyes that follow cursor
+1. Remove devicon by converting all icons into SVGs
+2. Add old chat, socsreynolds, mrflatbeds, and form builder projects
+3. Light/Dark Mode toggle + defaults via `prefers-color-scheme` setting
+4. Small date badges beside projects (top right of title)
+5. Simple animation https://github.com/formkit/auto-animate
+6. Filter (fixed icon for filtering projects by technology)

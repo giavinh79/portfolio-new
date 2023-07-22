@@ -1,5 +1,4 @@
-/* Map for badges (technologies to icons/images) */
-export const BADGE_ICONS = {
+export const TECH_TO_BADGE_MAP = {
   adonisjs: {
     devicon: false,
     link: '/images/icons/adonisjs.svg',
