@@ -18,7 +18,7 @@
     "react-plock": "3.0.0"
   },
   "devDependencies": {
-    "cypress": "^12.17.3",
+    "cypress": "^13.0.0",
     "eslint": "^8.46.0",
     "eslint-config-next": "^13.4.13"
   }
