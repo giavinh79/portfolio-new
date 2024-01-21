@@ -115,6 +115,7 @@ export const Project = ({ project }) => {
           )}
           <img
             src={`/images/projects/${imageName}${carouselIndex}.png`}
+            className={styles.image}
             alt={`${project.title} Sample Image ${carouselIndex}`}
           />
           {numImages > 1 && (
