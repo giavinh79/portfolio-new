@@ -36,3 +36,4 @@ Technology Icons: https://devicons.github.io/devicon/
 4. Small date badges beside projects (top right of title)
 5. Simple animation https://github.com/formkit/auto-animate
 6. Filter (fixed icon for filtering projects by technology)
+7. Update with new CSS features (container queries, CSS nesting, CSS variables)

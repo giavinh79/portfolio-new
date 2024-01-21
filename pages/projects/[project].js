@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { PROJECTS_DATA } from 'constants/';
+import { PROJECTS_DATA } from 'utils/constants';
 import { Project } from 'components/Project';
 
 const isValidProject = (project) => {

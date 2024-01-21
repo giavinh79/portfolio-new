@@ -1,5 +1,5 @@
 import React from 'react';
-import { TECH_TO_BADGE_MAP } from '../../constants';
+import { TECH_TO_BADGE_MAP } from '../../utils/constants';
 import { Badge } from './Badge';
 import styles from './badges.module.css';
 

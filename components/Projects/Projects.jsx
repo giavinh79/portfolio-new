@@ -1,6 +1,6 @@
 import { Masonry } from 'react-plock';
 
-import { PROJECTS_DATA } from 'constants/';
+import { PROJECTS_DATA } from 'utils/constants';
 import { Card } from 'components/Projects/Card';
 
 const IMAGE_URL = '/images/projects';

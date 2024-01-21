@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import { CSS_TO_LAZY_LOAD } from 'constants';
+import { CSS_TO_LAZY_LOAD } from 'utils/constants';
 import { lazyLoadCss } from 'helpers';
 
 import { Badges } from './Badges';
@@ -15,7 +15,14 @@ export const Project = ({ project }) => {
 
   useEffect(() => {
     lazyLoadCss(CSS_TO_LAZY_LOAD);
-    setIsMounted(true);
+
+    const timeout = setTimeout(() => {
+      setIsMounted(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, []);
 
   const handleNextPicture = () => {
@@ -41,7 +48,7 @@ export const Project = ({ project }) => {
     return dots;
   };
 
-  const loadRemainingImages = useCallback(() => {
+  const loadRemainingImages = () => {
     if (numImages === 1) return;
 
     const startingIndex = 2; // first image already loaded on mount
@@ -50,11 +57,11 @@ export const Project = ({ project }) => {
     return (
       <div style={{ display: 'none' }}>
         {imageIndexes.map((index) => (
-          <img src={`/images/projects/${imageName}${index}.png`} alt={`placeholder for loading ${index}`} key={index} />
+          <img src={`/images/projects/${imageName}${index}.png`} alt='' key={index} />
         ))}
       </div>
     );
-  }, [imageName, numImages]);
+  };
 
   return (
     <div className={styles.container}>
@@ -108,7 +115,6 @@ export const Project = ({ project }) => {
           )}
           <img
             src={`/images/projects/${imageName}${carouselIndex}.png`}
-            className={styles.image}
             alt={`${project.title} Sample Image ${carouselIndex}`}
           />
           {numImages > 1 && (
