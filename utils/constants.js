@@ -106,7 +106,6 @@ export const PROJECTS_DATA = {
     description:
       'Open-source project management web application for teams. It is implemented with <strong>React.js</strong> for the frontend, <strong>Adonis.js</strong> (Node.js framework) as the REST API backend, <strong>Cloudinary</strong> for image storage, and a <strong>PostgreSQL</strong> database. It uses <strong>Ant Design</strong> for UI styling. Some features include task drag-and-drop dashboards, administration hierarchy, chat, logs, and analytics.',
     github: 'https://github.com/giavinh79/Plop',
-    demo: 'https://www.plopapp.me/',
     numImages: 6,
     imageName: 'plop',
     tags: ['react', 'javascript', 'adonisjs', 'postgresql', 'ant design', 'node.js', 'styled-components'],

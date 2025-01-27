@@ -7,6 +7,12 @@ import { lazyLoadCss } from 'helpers';
 import { Badges } from './Badges';
 import styles from './project.module.css';
 
+const CarouselDots = ({ carouselIndex, setCarouselIndex, numImages }) =>
+  Array.from({ length: numImages }, (_, i) => i + 1).map((i) => {
+    const classNames = i === carouselIndex ? `${styles.dot} ${styles.active}` : styles.dot;
+    return <button key={i} data-cy={`carousel-dot-${i}`} className={classNames} onClick={() => setCarouselIndex(i)} />;
+  });
+
 export const Project = ({ project }) => {
   const { tags, title, description, github, demo, numImages, imageName } = project;
 
@@ -33,19 +39,6 @@ export const Project = ({ project }) => {
   const handlePreviousPicture = () => {
     const index = carouselIndex === 1 ? numImages : carouselIndex - 1;
     setCarouselIndex(index);
-  };
-
-  const renderDots = () => {
-    const dots = [];
-
-    for (let i = 1; i < numImages + 1; i++) {
-      const classNames = i === carouselIndex ? `${styles.dot} ${styles.active}` : styles.dot;
-
-      dots.push(
-        <button key={i} data-cy={`carousel-dot-${i}`} className={classNames} onClick={() => setCarouselIndex(i)} />
-      );
-    }
-    return dots;
   };
 
   const loadRemainingImages = () => {
@@ -124,7 +117,9 @@ export const Project = ({ project }) => {
             </button>
           )}
         </section>
-        <div className={styles['dot-wrapper']}>{renderDots()}</div>
+        <div className={styles['dot-wrapper']}>
+          <CarouselDots carouselIndex={carouselIndex} setCarouselIndex={setCarouselIndex} numImages={numImages} />
+        </div>
 
         <Badges tags={tags} />
 
